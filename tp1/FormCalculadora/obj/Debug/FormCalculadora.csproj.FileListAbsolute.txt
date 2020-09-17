@@ -1,0 +1,13 @@
+C:\Users\User\Desktop\UTN\TPs_lab\TPs.DeMoraiz.Alejandro\FormCalculadora\bin\Debug\FormCalculadora.exe.config
+C:\Users\User\Desktop\UTN\TPs_lab\TPs.DeMoraiz.Alejandro\FormCalculadora\bin\Debug\FormCalculadora.exe
+C:\Users\User\Desktop\UTN\TPs_lab\TPs.DeMoraiz.Alejandro\FormCalculadora\bin\Debug\FormCalculadora.pdb
+C:\Users\User\Desktop\UTN\TPs_lab\TPs.DeMoraiz.Alejandro\FormCalculadora\obj\Debug\FormCalculadora.csprojAssemblyReference.cache
+C:\Users\User\Desktop\UTN\TPs_lab\TPs.DeMoraiz.Alejandro\FormCalculadora\obj\Debug\FormCalculadora.FormCalculadora.resources
+C:\Users\User\Desktop\UTN\TPs_lab\TPs.DeMoraiz.Alejandro\FormCalculadora\obj\Debug\FormCalculadora.Properties.Resources.resources
+C:\Users\User\Desktop\UTN\TPs_lab\TPs.DeMoraiz.Alejandro\FormCalculadora\obj\Debug\FormCalculadora.csproj.GenerateResource.cache
+C:\Users\User\Desktop\UTN\TPs_lab\TPs.DeMoraiz.Alejandro\FormCalculadora\obj\Debug\FormCalculadora.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\UTN\TPs_lab\TPs.DeMoraiz.Alejandro\FormCalculadora\obj\Debug\FormCalculadora.exe
+C:\Users\User\Desktop\UTN\TPs_lab\TPs.DeMoraiz.Alejandro\FormCalculadora\obj\Debug\FormCalculadora.pdb
+C:\Users\User\Desktop\UTN\TPs_lab\TPs.DeMoraiz.Alejandro\FormCalculadora\bin\Debug\Entidades.dll
+C:\Users\User\Desktop\UTN\TPs_lab\TPs.DeMoraiz.Alejandro\FormCalculadora\bin\Debug\Entidades.pdb
+C:\Users\User\Desktop\UTN\TPs_lab\TPs.DeMoraiz.Alejandro\FormCalculadora\obj\Debug\FormCalculadora.csproj.CopyComplete
