@@ -8,33 +8,56 @@ using System.Drawing;
 
 namespace Entidades
 {
+
+    /// <summary>
+    /// Clase Sedan que hereda de la clase Vehiculo
+    /// </summary>
    public class Sedan : Vehiculo
     {
+
+        #region Campos
+
         private ETipo tipo;
 
+        #endregion
 
+
+        #region Constructores
 
         /// <summary>
-        /// Por defecto, TIPO será Monovolumen
+        /// 
+        /// Constructor de la clase Sedan donde se establecera Por defecto que el atributo Tipo de la Clase ETipo será Cincopuertas
         /// </summary>
-        /// <param name="marca"></param>
-        /// <param name="chasis"></param>
-        /// <param name="color"></param>
+        /// <param name="chasis"> String que indica el tipo de chasis que tiene el Sedan</param>
+        /// <param name="marca"> Atributo marca de la clase enum Emarca que determina la marca del Sedan</param>
+        /// <param name="color"> Atributo color de la clase ConsoleColor que determina el color del Sedan</param>
         public Sedan(EMarca marca, string chasis, ConsoleColor color)
             :base(chasis, marca, color)
         {
             this.tipo = ETipo.CincoPuertas;
+           
         }
 
+        /// <summary>
+        /// Constructor de la clase Sedan donde todos sus Campos deben ser ingresados
+        /// </summary>
+        /// <param name="chasis"> String que indica el tipo de chasis que tiene el Sedan</param>
+        /// <param name="marca"> Atributo marca de la clase enum Emarca que determina la marca del Sedan</param>
+        /// <param name="color"> Atributo color de la clase ConsoleColor que determina el color del Sedan</param>
+        /// <param name="tipo">Atributo tipo de la Clase ETipo que determina el tipo del Sedan </param>
         public Sedan(EMarca marca, string chasis, ConsoleColor color, ETipo tipo) : this(marca, chasis, color)
         {
 
         }
 
+        #endregion
+
+        #region Propiedades
+
         /// <summary>
-        /// Los automoviles son medianos
+        /// Propiedad de solo lectura : Retornará el tamaño del Sedan el cual por defecto es mediano.
         /// </summary>
-        public override ETamanio Tamanio
+        protected override ETamanio Tamanio
         {
             get
             {
@@ -44,6 +67,14 @@ namespace Entidades
             }
         }
 
+        #endregion
+
+
+        #region Metodos
+        /// <summary>
+        /// Publica todos los datos del Sedan, siendo este metodo una sobrecarga del metodo Mostrar de la clase Vehiculo.
+        /// </summary>
+        /// <returns> Retorna un string que nos muestra los campos de la clase Sedan </returns>
         public override string Mostrar()
         {
             StringBuilder sb = new StringBuilder();
@@ -58,10 +89,19 @@ namespace Entidades
             return sb.ToString();
         }
 
-           public enum ETipo { 
+        #endregion
+
+        #region Tipos anidados
+
+        /// <summary>
+        /// Clase enum de Tipos de Sedan segun su cantidad de puertas.
+        /// </summary>
+        public enum ETipo { 
             
             CuatroPuertas, CincoPuertas 
         
             }
+
+        #endregion
     }
 }
