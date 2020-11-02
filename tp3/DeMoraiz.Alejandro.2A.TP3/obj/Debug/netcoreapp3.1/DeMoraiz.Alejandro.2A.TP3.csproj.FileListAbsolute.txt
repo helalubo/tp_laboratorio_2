@@ -1,0 +1,22 @@
+C:\Users\User\source\repos\DeMoraiz.Alejandro.2A.TP3\DeMoraiz.Alejandro.2A.TP3\bin\Debug\netcoreapp3.1\DeMoraiz.Alejandro.2A.TP3.exe
+C:\Users\User\source\repos\DeMoraiz.Alejandro.2A.TP3\DeMoraiz.Alejandro.2A.TP3\bin\Debug\netcoreapp3.1\DeMoraiz.Alejandro.2A.TP3.deps.json
+C:\Users\User\source\repos\DeMoraiz.Alejandro.2A.TP3\DeMoraiz.Alejandro.2A.TP3\bin\Debug\netcoreapp3.1\DeMoraiz.Alejandro.2A.TP3.runtimeconfig.json
+C:\Users\User\source\repos\DeMoraiz.Alejandro.2A.TP3\DeMoraiz.Alejandro.2A.TP3\bin\Debug\netcoreapp3.1\DeMoraiz.Alejandro.2A.TP3.runtimeconfig.dev.json
+C:\Users\User\source\repos\DeMoraiz.Alejandro.2A.TP3\DeMoraiz.Alejandro.2A.TP3\bin\Debug\netcoreapp3.1\DeMoraiz.Alejandro.2A.TP3.dll
+C:\Users\User\source\repos\DeMoraiz.Alejandro.2A.TP3\DeMoraiz.Alejandro.2A.TP3\bin\Debug\netcoreapp3.1\DeMoraiz.Alejandro.2A.TP3.pdb
+C:\Users\User\source\repos\DeMoraiz.Alejandro.2A.TP3\DeMoraiz.Alejandro.2A.TP3\obj\Debug\netcoreapp3.1\DeMoraiz.Alejandro.2A.TP3.csprojAssemblyReference.cache
+C:\Users\User\source\repos\DeMoraiz.Alejandro.2A.TP3\DeMoraiz.Alejandro.2A.TP3\obj\Debug\netcoreapp3.1\DeMoraiz.Alejandro.2A.TP3.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\DeMoraiz.Alejandro.2A.TP3\DeMoraiz.Alejandro.2A.TP3\obj\Debug\netcoreapp3.1\DeMoraiz.Alejandro.2A.TP3.AssemblyInfo.cs
+C:\Users\User\source\repos\DeMoraiz.Alejandro.2A.TP3\DeMoraiz.Alejandro.2A.TP3\obj\Debug\netcoreapp3.1\DeMoraiz.Alejandro.2A.TP3.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\DeMoraiz.Alejandro.2A.TP3\DeMoraiz.Alejandro.2A.TP3\obj\Debug\netcoreapp3.1\DeMoraiz.Alejandro.2A.TP3.dll
+C:\Users\User\source\repos\DeMoraiz.Alejandro.2A.TP3\DeMoraiz.Alejandro.2A.TP3\obj\Debug\netcoreapp3.1\DeMoraiz.Alejandro.2A.TP3.pdb
+C:\Users\User\source\repos\DeMoraiz.Alejandro.2A.TP3\DeMoraiz.Alejandro.2A.TP3\obj\Debug\netcoreapp3.1\DeMoraiz.Alejandro.2A.TP3.genruntimeconfig.cache
+C:\Users\User\source\repos\DeMoraiz.Alejandro.2A.TP3\DeMoraiz.Alejandro.2A.TP3\bin\Debug\netcoreapp3.1\Archivos.dll
+C:\Users\User\source\repos\DeMoraiz.Alejandro.2A.TP3\DeMoraiz.Alejandro.2A.TP3\bin\Debug\netcoreapp3.1\Clases Abstractas.dll
+C:\Users\User\source\repos\DeMoraiz.Alejandro.2A.TP3\DeMoraiz.Alejandro.2A.TP3\bin\Debug\netcoreapp3.1\Clases Instanciables.dll
+C:\Users\User\source\repos\DeMoraiz.Alejandro.2A.TP3\DeMoraiz.Alejandro.2A.TP3\bin\Debug\netcoreapp3.1\Excepciones.dll
+C:\Users\User\source\repos\DeMoraiz.Alejandro.2A.TP3\DeMoraiz.Alejandro.2A.TP3\bin\Debug\netcoreapp3.1\Archivos.pdb
+C:\Users\User\source\repos\DeMoraiz.Alejandro.2A.TP3\DeMoraiz.Alejandro.2A.TP3\bin\Debug\netcoreapp3.1\Clases Abstractas.pdb
+C:\Users\User\source\repos\DeMoraiz.Alejandro.2A.TP3\DeMoraiz.Alejandro.2A.TP3\bin\Debug\netcoreapp3.1\Clases Instanciables.pdb
+C:\Users\User\source\repos\DeMoraiz.Alejandro.2A.TP3\DeMoraiz.Alejandro.2A.TP3\bin\Debug\netcoreapp3.1\Excepciones.pdb
+C:\Users\User\source\repos\DeMoraiz.Alejandro.2A.TP3\DeMoraiz.Alejandro.2A.TP3\obj\Debug\netcoreapp3.1\DeMoraiz.Alejandro.2A.TP3.csproj.CopyComplete
