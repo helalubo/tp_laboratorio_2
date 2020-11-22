@@ -88,9 +88,31 @@ namespace vista
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
-           /// Aca inicializar hilo
+            /// Aca inicializar hilo
+            hiloPrincipal = new Thread(CargarGrillaPrincipal);
+            hiloPrincipal.Start();
+        }
+
+        private void CargarGrillaPrincipal()
+        {
+
+            if (this.dgvPrincipal.InvokeRequired)
+            {
+                this.dgvPrincipal.BeginInvoke((MethodInvoker)delegate ()
+                {
 
             this.dgvPrincipal.DataSource = frm.dts;
+                }
+                        );
+            }
+            else
+            {
+                this.dgvPrincipal.DataSource = frm.dts;
+            }
+
         }
+
+
+
     }
 }
