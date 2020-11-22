@@ -120,11 +120,11 @@ namespace vista
             {
                 hiloPrincipal.Start();
             }
-            else
-            {
-                hiloPrincipal.Abort();
+            //else
+            //{
+            //    hiloPrincipal.Abort();
 
-            }
+            //}
 
         }
 

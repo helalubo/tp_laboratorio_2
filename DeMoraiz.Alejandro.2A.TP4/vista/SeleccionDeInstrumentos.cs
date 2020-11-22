@@ -16,8 +16,8 @@ namespace vista
         public SqlDataAdapter da;
         public DataTable dt;
 
-    
 
+    
 
 
 
@@ -27,9 +27,9 @@ namespace vista
         #endregion
 
 
-      
 
-        
+
+
 
         #region Constructor 
 
@@ -75,6 +75,7 @@ namespace vista
 
 
                 this.da = new SqlDataAdapter();
+                this.dt = new DataTable();
 
                 this.da.SelectCommand = new SqlCommand("select id, nombre,precio,cantidad from Instrumento where nombre like '%" + this.textBoxBuscar.Text + "%'", accesoADatos.Conexion);
 
@@ -180,9 +181,11 @@ namespace vista
 
 
                 this.ConfigurarGrilla();
-                this.da.Fill(this.dt);
+               this.da.Fill(this.dt);
 
                 this.dgvGrilla.DataSource = this.dt;
+
+               
 
             }
             catch (Exception ex)
@@ -204,8 +207,7 @@ namespace vista
 
 
             DataRow fila = this.dt.Rows[i];
-
-
+            
             string id = (fila["id"].ToString());
 
 
@@ -219,8 +221,9 @@ namespace vista
 
 
                 this.da = new SqlDataAdapter();
+                this.dt = new DataTable();
 
-                this.da.SelectCommand = new SqlCommand("select id , nombre,precio ,cantidad from Instrumento where id = " + id +";", accesoADatos.Conexion);
+                this.da.SelectCommand = new SqlCommand("select id,nombre,precio,cantidad from Instrumento where id = " + id +";", accesoADatos.Conexion);
 
 
 
