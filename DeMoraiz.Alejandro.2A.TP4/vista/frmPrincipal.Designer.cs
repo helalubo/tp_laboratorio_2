@@ -104,6 +104,7 @@ namespace vista
             this.dgvPrincipal.RowHeadersWidth = 62;
             this.dgvPrincipal.Size = new System.Drawing.Size(890, 273);
             this.dgvPrincipal.TabIndex = 11;
+            this.dgvPrincipal.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPrincipal_CellContentClick);
             // 
             // btnActualizar
             // 

@@ -229,11 +229,11 @@ namespace vista
 
 
 
-
+                
                 this.da.Fill(this.dt);
 
-
-
+               
+                
 
                 this.Close();
 

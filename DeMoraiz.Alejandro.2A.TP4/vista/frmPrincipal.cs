@@ -15,9 +15,10 @@ namespace vista
 
         public SqlDataAdapter da;
         public DataTable dt;
+        DataTable aux; 
+      
 
         public SeleccionDeInstrumentos frmSeleccionar;
-
         public Thread hiloPrincipal;
         public Producto productoSeleccionado;
 
@@ -26,13 +27,13 @@ namespace vista
         public frmPrincipal()
         {
 
-
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
-            ConfigurarGrilla();
-           
-
-
+            hiloPrincipal = new Thread(SeleccionarProducto);
+            ConfigurarGrilla();   
+            configuracionDataTable();
+            aux =new DataTable();
+            this.aux = this.dt.Clone();
 
 
 
@@ -115,16 +116,17 @@ namespace vista
         private void btnActualizar_Click(object sender, EventArgs e)
         {
             /// Aca inicializar hilo
-            hiloPrincipal = new Thread(SeleccionarProducto);
+           hiloPrincipal = new Thread(SeleccionarProducto);
             if (!hiloPrincipal.IsAlive)
             {
                 hiloPrincipal.Start();
+              
             }
-            //else
-            //{
-            //    hiloPrincipal.Abort();
+            else
+            {
+                hiloPrincipal.Abort();
 
-            //}
+            }
 
         }
 
@@ -139,22 +141,32 @@ namespace vista
                 this.dgvPrincipal.BeginInvoke((MethodInvoker)delegate ()
                 {
 
-                    //this.dgvPrincipal.DataSource = frmSeleccionar.dt;
-                    this.dt = frmSeleccionar.dt;
-                    this.dgvPrincipal.DataSource = dt;
-                }
-                     );
+
+
+                
+
+
+                   this.aux.ImportRow(this.frmSeleccionar.dt.Rows[0]);       
+                    this.dgvPrincipal.DataSource = aux;
+                    this.aux = (DataTable) this.dgvPrincipal.DataSource;
+                });
 
             }
             else
             {
-                this.dt = frmSeleccionar.dt;
-                this.dgvPrincipal.DataSource = dt;
+                this.aux = this.dt.Clone();
+
+                this.aux.ImportRow(this.frmSeleccionar.dt.Rows[0]);
+
+                this.dgvPrincipal.DataSource = aux;
+
+
             }
         }
 
+        private void dgvPrincipal_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
-
-
+        }
     }
 }
