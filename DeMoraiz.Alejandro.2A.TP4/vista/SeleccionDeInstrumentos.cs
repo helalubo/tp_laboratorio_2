@@ -77,7 +77,7 @@ namespace vista
                 this.da = new SqlDataAdapter();
                 this.dt = new DataTable();
 
-                this.da.SelectCommand = new SqlCommand("select id, nombre,precio,cantidad from Instrumento where nombre like '%" + this.textBoxBuscar.Text + "%'", accesoADatos.Conexion);
+                this.da.SelectCommand = new SqlCommand("select * from Instrumento where nombre like '%" + this.textBoxBuscar.Text + "%'", accesoADatos.Conexion);
 
 
                 rta = true;
@@ -221,9 +221,10 @@ namespace vista
 
 
                 this.da = new SqlDataAdapter();
-                this.dt = new DataTable();
+                   this.dt = new DataTable();
+             
 
-                this.da.SelectCommand = new SqlCommand("select id,nombre,precio,cantidad from Instrumento where id = " + id +";", accesoADatos.Conexion);
+                this.da.SelectCommand = new SqlCommand("select id , nombre,precio ,cantidad  from Instrumento where id = " + id +";", accesoADatos.Conexion);
 
 
 

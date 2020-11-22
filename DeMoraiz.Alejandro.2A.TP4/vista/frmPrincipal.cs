@@ -139,14 +139,17 @@ namespace vista
                 this.dgvPrincipal.BeginInvoke((MethodInvoker)delegate ()
                 {
 
-                    this.dgvPrincipal.DataSource = frmSeleccionar.dt;
+                    //this.dgvPrincipal.DataSource = frmSeleccionar.dt;
+                    this.dt = frmSeleccionar.dt;
+                    this.dgvPrincipal.DataSource = dt;
                 }
                      );
 
             }
             else
             {
-                this.dgvPrincipal.DataSource = frmSeleccionar.dt;
+                this.dt = frmSeleccionar.dt;
+                this.dgvPrincipal.DataSource = dt;
             }
         }
 
