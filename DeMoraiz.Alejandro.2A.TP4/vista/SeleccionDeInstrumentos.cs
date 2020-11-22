@@ -179,8 +179,8 @@ namespace vista
 
 
 
-                this.da.Fill(this.dt);
                 this.ConfigurarGrilla();
+                this.da.Fill(this.dt);
 
                 this.dgvGrilla.DataSource = this.dt;
 
@@ -206,8 +206,7 @@ namespace vista
             DataRow fila = this.dt.Rows[i];
 
 
-
-            string id = (fila[0].ToString());
+            string id = (fila["id"].ToString());
 
 
             try
@@ -221,7 +220,7 @@ namespace vista
 
                 this.da = new SqlDataAdapter();
 
-                this.da.SelectCommand = new SqlCommand("select id, nombre,precio,cantidad from  Instrumento where id = " + id + ";", accesoADatos.Conexion);
+                this.da.SelectCommand = new SqlCommand("select id, nombre ,precio ,cantidad from  Instrumento where id = " + id + " ;", accesoADatos.Conexion);
 
 
 

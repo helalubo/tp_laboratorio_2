@@ -1,41 +1,38 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using Entidades;
+using System;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Entidades;
 
 namespace vista
 {
     public partial class frmPrincipal : Form
     {
 
-      
+
 
         public SqlDataAdapter da;
         public DataTable dt;
+
         public SeleccionDeInstrumentos frmSeleccionar;
 
-
-        Thread seleccionandoProductos;
+        public Thread hiloPrincipal;
+        public Producto productoSeleccionado;
 
 
 
         public frmPrincipal()
         {
 
-         
+
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
-          
             ConfigurarGrilla();
-           
+            hiloPrincipal = new Thread(SeleccionarProducto);
+
+
 
 
 
@@ -48,9 +45,9 @@ namespace vista
 
         }
 
-     
-        public void configuracionDataTable() 
-            {
+
+        public void configuracionDataTable()
+        {
             this.dt = new DataTable("Producto");
 
             this.dt.Columns.Add("id", typeof(int));
@@ -95,7 +92,7 @@ namespace vista
             this.dgvPrincipal.ReadOnly = false;
 
             // No permito la multiselección
-            this.dgvPrincipal.MultiSelect = false;
+            this.dgvPrincipal.MultiSelect = true;
 
             // Selecciono toda la fila a la vez
             this.dgvPrincipal.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
@@ -118,13 +115,40 @@ namespace vista
         private void btnActualizar_Click(object sender, EventArgs e)
         {
             /// Aca inicializar hilo
+            if (!hiloPrincipal.IsAlive)
+            {
+                hiloPrincipal.Start();
+            }
+            //else
+            //{
+            //    hiloPrincipal.Abort();
+            //}
 
-            
-            this.dgvPrincipal.DataSource = frmSeleccionar.dt;
 
         }
 
-      
+
+        private void SeleccionarProducto()
+        {
+
+
+            if (this.dgvPrincipal.InvokeRequired)
+            {
+
+                this.dgvPrincipal.BeginInvoke((MethodInvoker)delegate ()
+                {
+
+                    this.dgvPrincipal.DataSource = frmSeleccionar.dt;
+                }
+                     );
+
+            }
+            else
+            {
+                this.dgvPrincipal.DataSource = frmSeleccionar.dt;
+            }
+        }
+
 
 
 
