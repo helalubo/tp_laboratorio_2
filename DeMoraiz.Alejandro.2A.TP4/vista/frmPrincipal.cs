@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -15,8 +16,15 @@ namespace vista
     public partial class frmPrincipal : Form
     {
 
-        public SeleccionDeInstrumentos frm;
-        public Thread hiloPrincipal;
+      
+
+        public SqlDataAdapter da;
+        public DataTable dt;
+        public SeleccionDeInstrumentos frmSeleccionar;
+
+
+        Thread seleccionandoProductos;
+
 
 
         public frmPrincipal()
@@ -25,19 +33,40 @@ namespace vista
          
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
-
+          
             ConfigurarGrilla();
-            
+           
+
 
 
         }
 
         private void btnCargarInstrumento_Click(object sender, EventArgs e)
         {
-            this.frm = new SeleccionDeInstrumentos();
-           
-            frm.Show();
+            this.frmSeleccionar = new SeleccionDeInstrumentos();
+            this.frmSeleccionar.Show();
+
         }
+
+     
+        public void configuracionDataTable() 
+            {
+            this.dt = new DataTable("Producto");
+
+            this.dt.Columns.Add("id", typeof(int));
+            this.dt.Columns.Add("nombre", typeof(string));
+            this.dt.Columns.Add("precio", typeof(float));
+            this.dt.Columns.Add("cantidad", typeof(int));
+
+
+            this.dt.PrimaryKey = new DataColumn[] { this.dt.Columns[0] };
+
+            this.dt.Columns["id"].AutoIncrement = true;
+            this.dt.Columns["id"].AutoIncrementSeed = 1;//obtener el último id insertado en la tabla
+            this.dt.Columns["id"].AutoIncrementStep = 1;
+
+        }
+
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -89,28 +118,13 @@ namespace vista
         private void btnActualizar_Click(object sender, EventArgs e)
         {
             /// Aca inicializar hilo
-            hiloPrincipal = new Thread(CargarGrillaPrincipal);
-            hiloPrincipal.Start();
-        }
 
-        private void CargarGrillaPrincipal()
-        {
-
-            if (this.dgvPrincipal.InvokeRequired)
-            {
-                this.dgvPrincipal.BeginInvoke((MethodInvoker)delegate ()
-                {
-
-            this.dgvPrincipal.DataSource = frm.dts;
-                }
-                        );
-            }
-            else
-            {
-                this.dgvPrincipal.DataSource = frm.dts;
-            }
+            
+            this.dgvPrincipal.DataSource = frmSeleccionar.dt;
 
         }
+
+      
 
 
 

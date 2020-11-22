@@ -1,16 +1,10 @@
 ﻿using CapaDatos;
+using Entidades;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Entidades;
-using System.Threading;
 
 namespace vista
 {
@@ -19,15 +13,23 @@ namespace vista
 
         #region Campos
 
-        protected SqlDataAdapter da;
-        protected DataTable dt;
-        public SqlDataAdapter das;
-        public DataTable dts;
+        public SqlDataAdapter da;
+        public DataTable dt;
 
-        Thread hiloSecundario;
+    
+
+
+
+
+
+
 
         #endregion
 
+
+      
+
+        
 
         #region Constructor 
 
@@ -35,11 +37,11 @@ namespace vista
         {
             InitializeComponent();
 
-           
+
 
             this.StartPosition = FormStartPosition.CenterScreen;
 
-           
+
 
 
         }
@@ -70,12 +72,13 @@ namespace vista
                 AccesoDatos accesoADatos = new AccesoDatos();
 
 
-                
+
 
                 this.da = new SqlDataAdapter();
 
-                this.da.SelectCommand = new SqlCommand("select * from Instrumento where nombre like '%" + this.textBoxBuscar.Text +"%'", accesoADatos.Conexion);
-              
+                this.da.SelectCommand = new SqlCommand("select id, nombre,precio,cantidad from Instrumento where nombre like '%" + this.textBoxBuscar.Text + "%'", accesoADatos.Conexion);
+
+
                 rta = true;
             }
             catch (Exception ex)
@@ -86,7 +89,7 @@ namespace vista
 
             return rta;
         }
-    
+
 
 
         #endregion
@@ -112,20 +115,7 @@ namespace vista
             this.dt.Columns["id"].AutoIncrementStep = 1;
 
 
-            this.dts = new DataTable("Producto");
-
-            this.dts.Columns.Add("id", typeof(int));
-            this.dts.Columns.Add("nombre", typeof(string));
-            this.dts.Columns.Add("precio", typeof(float));
-            this.dts.Columns.Add("cantidad", typeof(int));
-            
-
-            this.dts.PrimaryKey = new DataColumn[] { this.dts.Columns[0] };
-
-            this.dts.Columns["id"].AutoIncrement = true;
-            this.dts.Columns["id"].AutoIncrementSeed = 1;//obtener el último id insertado en la tabla
-            this.dts.Columns["id"].AutoIncrementStep = 1;
-
+           
         }
 
         #endregion
@@ -188,8 +178,8 @@ namespace vista
             {
 
 
-                 this.da.Fill(this.dt);
 
+                this.da.Fill(this.dt);
                 this.ConfigurarGrilla();
 
                 this.dgvGrilla.DataSource = this.dt;
@@ -201,7 +191,7 @@ namespace vista
                 MessageBox.Show(ex.Message);
             }
 
-            
+
 
 
         }
@@ -210,36 +200,40 @@ namespace vista
         {
 
 
-            int i = this.dgvGrilla.SelectedRows[0].Index; 
+            int i = this.dgvGrilla.SelectedRows[0].Index;
 
 
             DataRow fila = this.dt.Rows[i];
+
+
 
             string id = (fila[0].ToString());
 
 
             try
             {
+
+
                 AccesoDatos accesoADatos = new AccesoDatos();
 
 
 
 
-                this.das = new SqlDataAdapter();
+                this.da = new SqlDataAdapter();
 
-                this.das.SelectCommand = new SqlCommand("select * from Instrumento where id = " + id + ";", accesoADatos.Conexion);
-
-
+                this.da.SelectCommand = new SqlCommand("select id, nombre,precio,cantidad from  Instrumento where id = " + id + ";", accesoADatos.Conexion);
 
 
 
-                this.das.Fill(this.dts);
 
-                
+
+                this.da.Fill(this.dt);
+
+
 
 
                 this.Close();
-                
+
             }
             catch (Exception ex)
             {
@@ -248,7 +242,7 @@ namespace vista
             }
 
 
-         
+
 
 
 
@@ -264,6 +258,6 @@ namespace vista
 
         }
 
-       
+
     }
 }
