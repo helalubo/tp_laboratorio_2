@@ -1,0 +1,17 @@
+C:\Users\User\source\repos\DeMoraiz.Alejandro.2A.TP4\vista\bin\Debug\vista.exe.config
+C:\Users\User\source\repos\DeMoraiz.Alejandro.2A.TP4\vista\bin\Debug\vista.exe
+C:\Users\User\source\repos\DeMoraiz.Alejandro.2A.TP4\vista\bin\Debug\vista.pdb
+C:\Users\User\source\repos\DeMoraiz.Alejandro.2A.TP4\vista\obj\Debug\vista.csprojAssemblyReference.cache
+C:\Users\User\source\repos\DeMoraiz.Alejandro.2A.TP4\vista\obj\Debug\vista.Properties.Resources.resources
+C:\Users\User\source\repos\DeMoraiz.Alejandro.2A.TP4\vista\obj\Debug\vista.csproj.GenerateResource.cache
+C:\Users\User\source\repos\DeMoraiz.Alejandro.2A.TP4\vista\obj\Debug\vista.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\DeMoraiz.Alejandro.2A.TP4\vista\obj\Debug\vista.exe
+C:\Users\User\source\repos\DeMoraiz.Alejandro.2A.TP4\vista\obj\Debug\vista.pdb
+C:\Users\User\source\repos\DeMoraiz.Alejandro.2A.TP4\vista\obj\Debug\vista.frmPrincipal.resources
+C:\Users\User\source\repos\DeMoraiz.Alejandro.2A.TP4\vista\bin\Debug\CapaDatos.dll
+C:\Users\User\source\repos\DeMoraiz.Alejandro.2A.TP4\vista\bin\Debug\Entidades.dll
+C:\Users\User\source\repos\DeMoraiz.Alejandro.2A.TP4\vista\bin\Debug\CapaDatos.pdb
+C:\Users\User\source\repos\DeMoraiz.Alejandro.2A.TP4\vista\bin\Debug\CapaDatos.dll.config
+C:\Users\User\source\repos\DeMoraiz.Alejandro.2A.TP4\vista\bin\Debug\Entidades.pdb
+C:\Users\User\source\repos\DeMoraiz.Alejandro.2A.TP4\vista\obj\Debug\vista.SeleccionDeInstrumentos.resources
+C:\Users\User\source\repos\DeMoraiz.Alejandro.2A.TP4\vista\obj\Debug\vista.csproj.CopyComplete

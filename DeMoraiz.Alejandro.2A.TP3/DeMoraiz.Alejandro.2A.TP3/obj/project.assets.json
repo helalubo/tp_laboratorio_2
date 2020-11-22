@@ -87,11 +87,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\source\\repos\\DeMoraiz.Alejandro.2A.TP3\\DeMoraiz.Alejandro.2A.TP3\\DeMoraiz.Alejandro.2A.TP3.csproj",
+      "projectUniqueName": "C:\\Users\\User\\Desktop\\UTN\\tp_laboratorio_2\\DeMoraiz.Alejandro.2A.TP3\\DeMoraiz.Alejandro.2A.TP3\\DeMoraiz.Alejandro.2A.TP3.csproj",
       "projectName": "DeMoraiz.Alejandro.2A.TP3",
-      "projectPath": "C:\\Users\\User\\source\\repos\\DeMoraiz.Alejandro.2A.TP3\\DeMoraiz.Alejandro.2A.TP3\\DeMoraiz.Alejandro.2A.TP3.csproj",
+      "projectPath": "C:\\Users\\User\\Desktop\\UTN\\tp_laboratorio_2\\DeMoraiz.Alejandro.2A.TP3\\DeMoraiz.Alejandro.2A.TP3\\DeMoraiz.Alejandro.2A.TP3.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\source\\repos\\DeMoraiz.Alejandro.2A.TP3\\DeMoraiz.Alejandro.2A.TP3\\obj\\",
+      "outputPath": "C:\\Users\\User\\Desktop\\UTN\\tp_laboratorio_2\\DeMoraiz.Alejandro.2A.TP3\\DeMoraiz.Alejandro.2A.TP3\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -106,18 +106,19 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\User\\source\\repos\\DeMoraiz.Alejandro.2A.TP3\\Archivos\\Archivos.csproj": {
-              "projectPath": "C:\\Users\\User\\source\\repos\\DeMoraiz.Alejandro.2A.TP3\\Archivos\\Archivos.csproj"
+            "C:\\Users\\User\\Desktop\\UTN\\tp_laboratorio_2\\DeMoraiz.Alejandro.2A.TP3\\Archivos\\Archivos.csproj": {
+              "projectPath": "C:\\Users\\User\\Desktop\\UTN\\tp_laboratorio_2\\DeMoraiz.Alejandro.2A.TP3\\Archivos\\Archivos.csproj"
             },
-            "C:\\Users\\User\\source\\repos\\DeMoraiz.Alejandro.2A.TP3\\Clases Abstractas\\Clases Abstractas.csproj": {
-              "projectPath": "C:\\Users\\User\\source\\repos\\DeMoraiz.Alejandro.2A.TP3\\Clases Abstractas\\Clases Abstractas.csproj"
+            "C:\\Users\\User\\Desktop\\UTN\\tp_laboratorio_2\\DeMoraiz.Alejandro.2A.TP3\\Clases Abstractas\\Clases Abstractas.csproj": {
+              "projectPath": "C:\\Users\\User\\Desktop\\UTN\\tp_laboratorio_2\\DeMoraiz.Alejandro.2A.TP3\\Clases Abstractas\\Clases Abstractas.csproj"
             },
-            "C:\\Users\\User\\source\\repos\\DeMoraiz.Alejandro.2A.TP3\\Clases Instanciables\\Clases Instanciables.csproj": {
-              "projectPath": "C:\\Users\\User\\source\\repos\\DeMoraiz.Alejandro.2A.TP3\\Clases Instanciables\\Clases Instanciables.csproj"
+            "C:\\Users\\User\\Desktop\\UTN\\tp_laboratorio_2\\DeMoraiz.Alejandro.2A.TP3\\Clases Instanciables\\Clases Instanciables.csproj": {
+              "projectPath": "C:\\Users\\User\\Desktop\\UTN\\tp_laboratorio_2\\DeMoraiz.Alejandro.2A.TP3\\Clases Instanciables\\Clases Instanciables.csproj"
             },
-            "C:\\Users\\User\\source\\repos\\DeMoraiz.Alejandro.2A.TP3\\Excepciones\\Excepciones.csproj": {
-              "projectPath": "C:\\Users\\User\\source\\repos\\DeMoraiz.Alejandro.2A.TP3\\Excepciones\\Excepciones.csproj"
+            "C:\\Users\\User\\Desktop\\UTN\\tp_laboratorio_2\\DeMoraiz.Alejandro.2A.TP3\\Excepciones\\Excepciones.csproj": {
+              "projectPath": "C:\\Users\\User\\Desktop\\UTN\\tp_laboratorio_2\\DeMoraiz.Alejandro.2A.TP3\\Excepciones\\Excepciones.csproj"
             }
           }
         }
@@ -130,6 +131,7 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "imports": [
           "net461",
           "net462",
@@ -145,7 +147,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }
