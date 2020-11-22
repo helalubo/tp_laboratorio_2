@@ -220,7 +220,7 @@ namespace vista
 
                 this.da = new SqlDataAdapter();
 
-                this.da.SelectCommand = new SqlCommand("select id, nombre ,precio ,cantidad from  Instrumento where id = " + id + " ;", accesoADatos.Conexion);
+                this.da.SelectCommand = new SqlCommand("select id , nombre,precio ,cantidad from Instrumento where id = " + id +";", accesoADatos.Conexion);
 
 
 

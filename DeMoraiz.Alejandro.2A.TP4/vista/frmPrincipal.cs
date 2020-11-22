@@ -30,7 +30,7 @@ namespace vista
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
             ConfigurarGrilla();
-            hiloPrincipal = new Thread(SeleccionarProducto);
+           
 
 
 
@@ -115,15 +115,16 @@ namespace vista
         private void btnActualizar_Click(object sender, EventArgs e)
         {
             /// Aca inicializar hilo
+            hiloPrincipal = new Thread(SeleccionarProducto);
             if (!hiloPrincipal.IsAlive)
             {
                 hiloPrincipal.Start();
             }
-            //else
-            //{
-            //    hiloPrincipal.Abort();
-            //}
+            else
+            {
+                hiloPrincipal.Abort();
 
+            }
 
         }
 
