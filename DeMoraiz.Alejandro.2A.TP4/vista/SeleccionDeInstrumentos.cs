@@ -181,7 +181,13 @@ namespace vista
 
 
                 this.ConfigurarGrilla();
+
+
+                //lleno la grilla con el fill que esta establecido por el comando select * 
                this.da.Fill(this.dt);
+
+
+
 
                 this.dgvGrilla.DataSource = this.dt;
 
@@ -230,9 +236,15 @@ namespace vista
 
 
                 
-                this.da.Fill(this.dt);
 
                
+
+
+              
+
+                
+                this.da.Fill(this.dt);
+
                 
 
                 this.Close();

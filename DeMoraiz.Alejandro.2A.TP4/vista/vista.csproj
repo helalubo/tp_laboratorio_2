@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="SeleccionDeAccesorios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SeleccionDeAccesorios.Designer.cs">
+      <DependentUpon>SeleccionDeAccesorios.cs</DependentUpon>
+    </Compile>
     <Compile Include="SeleccionDeInstrumentos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +78,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="SeleccionDeAccesorios.resx">
+      <DependentUpon>SeleccionDeAccesorios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SeleccionDeInstrumentos.resx">
       <DependentUpon>SeleccionDeInstrumentos.cs</DependentUpon>
     </EmbeddedResource>

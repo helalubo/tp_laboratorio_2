@@ -32,3 +32,4 @@ C:\Users\User\Desktop\UTN\tp_laboratorio_2\DeMoraiz.Alejandro.2A.TP4\vista\obj\D
 C:\Users\User\Desktop\UTN\tp_laboratorio_2\DeMoraiz.Alejandro.2A.TP4\vista\obj\Debug\vista.csproj.CopyComplete
 C:\Users\User\Desktop\UTN\tp_laboratorio_2\DeMoraiz.Alejandro.2A.TP4\vista\obj\Debug\vista.exe
 C:\Users\User\Desktop\UTN\tp_laboratorio_2\DeMoraiz.Alejandro.2A.TP4\vista\obj\Debug\vista.pdb
+C:\Users\User\Desktop\UTN\tp_laboratorio_2\DeMoraiz.Alejandro.2A.TP4\vista\obj\Debug\vista.SeleccionDeAccesorios.resources

@@ -15,7 +15,7 @@ namespace vista
 
         public SqlDataAdapter da;
         public DataTable dt;
-        DataTable aux; 
+        public   DataTable aux; 
       
 
         public SeleccionDeInstrumentos frmSeleccionar;
@@ -57,7 +57,7 @@ namespace vista
             this.dt.Columns.Add("cantidad", typeof(int));
 
 
-            this.dt.PrimaryKey = new DataColumn[] { this.dt.Columns[0] };
+          ///  this.dt.PrimaryKey = new DataColumn[] { this.dt.Columns[0] };
 
             this.dt.Columns["id"].AutoIncrement = true;
             this.dt.Columns["id"].AutoIncrementSeed = 1;//obtener el último id insertado en la tabla
@@ -111,6 +111,9 @@ namespace vista
             // Saco los encabezados de las filas
             this.dgvPrincipal.RowHeadersVisible = false;
 
+
+           
+
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)
@@ -141,12 +144,12 @@ namespace vista
                 this.dgvPrincipal.BeginInvoke((MethodInvoker)delegate ()
                 {
 
+                    
 
 
-                
+                    this.aux.ImportRow(this.frmSeleccionar.dt.Rows[0]);     //no tocar  
+                   
 
-
-                   this.aux.ImportRow(this.frmSeleccionar.dt.Rows[0]);       
                     this.dgvPrincipal.DataSource = aux;
                     this.aux = (DataTable) this.dgvPrincipal.DataSource;
                 });
