@@ -43,7 +43,7 @@ namespace vista
             // dgvGrilla
             // 
             this.dgvGrilla.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvGrilla.Location = new System.Drawing.Point(35, 208);
+            this.dgvGrilla.Location = new System.Drawing.Point(35, 198);
             this.dgvGrilla.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgvGrilla.Name = "dgvGrilla";
             this.dgvGrilla.RowHeadersWidth = 62;

@@ -19,6 +19,7 @@ namespace vista
       
 
         public SeleccionDeInstrumentos frmSeleccionar;
+        public SeleccionDeAccesorios frmSeleccionarAccesorio;
         public Thread hiloPrincipal;
         public Producto productoSeleccionado;
 
@@ -54,7 +55,7 @@ namespace vista
             this.dt.Columns.Add("id", typeof(int));
             this.dt.Columns.Add("nombre", typeof(string));
             this.dt.Columns.Add("precio", typeof(float));
-            //this.dt.Columns.Add("cantidad", typeof(int));
+            
 
 
           ///  this.dt.PrimaryKey = new DataColumn[] { this.dt.Columns[0] };
@@ -63,6 +64,7 @@ namespace vista
             this.dt.Columns["id"].AutoIncrementSeed = 1;//obtener el último id insertado en la tabla
             this.dt.Columns["id"].AutoIncrementStep = 1;
         
+           
 
         }
 
@@ -137,7 +139,7 @@ namespace vista
 
         private void SeleccionarProducto()
         {
-
+           
 
             if (this.dgvPrincipal.InvokeRequired)
             {
@@ -145,10 +147,14 @@ namespace vista
                 this.dgvPrincipal.BeginInvoke((MethodInvoker)delegate ()
                 {
 
+                   
+                   
+                                        this.aux.ImportRow(this.frmSeleccionarAccesorio.dt.Rows[0]);     //no tocar  
+                   //                     this.aux.ImportRow(this.frmSeleccionar.dt.Rows[0]);     //no tocar  
+
+                  
                     
 
-
-                    this.aux.ImportRow(this.frmSeleccionar.dt.Rows[0]);     //no tocar  
                    
 
                     this.dgvPrincipal.DataSource = aux;
@@ -158,11 +164,9 @@ namespace vista
             }
             else
             {
-                this.aux = this.dt.Clone();
-
-                this.aux.ImportRow(this.frmSeleccionar.dt.Rows[0]);
 
                 this.dgvPrincipal.DataSource = aux;
+                this.aux = (DataTable)this.dgvPrincipal.DataSource;
 
 
             }
@@ -171,6 +175,12 @@ namespace vista
         private void dgvPrincipal_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void btnCargarAccesorio_Click(object sender, EventArgs e)
+        {
+            this.frmSeleccionarAccesorio = new SeleccionDeAccesorios();
+            this.frmSeleccionarAccesorio.Show();
         }
     }
 }

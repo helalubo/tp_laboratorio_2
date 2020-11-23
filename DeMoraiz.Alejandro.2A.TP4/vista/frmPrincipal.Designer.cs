@@ -82,6 +82,7 @@ namespace vista
             this.btnCargarAccesorio.Text = "Cargar Accesorio";
             this.btnCargarAccesorio.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCargarAccesorio.UseVisualStyleBackColor = true;
+            this.btnCargarAccesorio.Click += new System.EventHandler(this.btnCargarAccesorio_Click);
             // 
             // button1
             // 
