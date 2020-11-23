@@ -184,11 +184,11 @@ namespace vista
             }
         }
 
-        private void dgvPrincipal_CellContentClick(object sender, DataGridViewCellEventArgs e)
+    
+
+        private void btnVender_Click(object sender, EventArgs e)
         {
 
         }
-
-     
     }
 }

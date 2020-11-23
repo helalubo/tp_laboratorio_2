@@ -33,7 +33,7 @@ namespace vista
             this.label1 = new System.Windows.Forms.Label();
             this.btnCargarInstrumento = new System.Windows.Forms.Button();
             this.btnCargarAccesorio = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnVender = new System.Windows.Forms.Button();
             this.dgvPrincipal = new System.Windows.Forms.DataGridView();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
@@ -47,7 +47,7 @@ namespace vista
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1290, 132);
+            this.panel1.Size = new System.Drawing.Size(1203, 132);
             this.panel1.TabIndex = 0;
             // 
             // label1
@@ -64,7 +64,7 @@ namespace vista
             // btnCargarInstrumento
             // 
             this.btnCargarInstrumento.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCargarInstrumento.Location = new System.Drawing.Point(50, 415);
+            this.btnCargarInstrumento.Location = new System.Drawing.Point(32, 156);
             this.btnCargarInstrumento.Name = "btnCargarInstrumento";
             this.btnCargarInstrumento.Size = new System.Drawing.Size(415, 41);
             this.btnCargarInstrumento.TabIndex = 2;
@@ -75,7 +75,7 @@ namespace vista
             // btnCargarAccesorio
             // 
             this.btnCargarAccesorio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCargarAccesorio.Location = new System.Drawing.Point(471, 415);
+            this.btnCargarAccesorio.Location = new System.Drawing.Point(494, 156);
             this.btnCargarAccesorio.Name = "btnCargarAccesorio";
             this.btnCargarAccesorio.Size = new System.Drawing.Size(428, 41);
             this.btnCargarAccesorio.TabIndex = 3;
@@ -84,34 +84,34 @@ namespace vista
             this.btnCargarAccesorio.UseVisualStyleBackColor = true;
             this.btnCargarAccesorio.Click += new System.EventHandler(this.btnCargarAccesorio_Click);
             // 
-            // button1
+            // btnVender
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(107)))), ((int)(((byte)(33)))));
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.Control;
-            this.button1.Location = new System.Drawing.Point(968, 664);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(217, 54);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Vender";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnVender.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(107)))), ((int)(((byte)(33)))));
+            this.btnVender.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVender.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnVender.Location = new System.Drawing.Point(947, 441);
+            this.btnVender.Name = "btnVender";
+            this.btnVender.Size = new System.Drawing.Size(217, 54);
+            this.btnVender.TabIndex = 4;
+            this.btnVender.Text = "Vender";
+            this.btnVender.UseVisualStyleBackColor = false;
+            this.btnVender.Click += new System.EventHandler(this.btnVender_Click);
             // 
             // dgvPrincipal
             // 
             this.dgvPrincipal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPrincipal.Location = new System.Drawing.Point(33, 464);
+            this.dgvPrincipal.Location = new System.Drawing.Point(32, 222);
             this.dgvPrincipal.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgvPrincipal.Name = "dgvPrincipal";
             this.dgvPrincipal.RowHeadersWidth = 62;
             this.dgvPrincipal.Size = new System.Drawing.Size(890, 273);
             this.dgvPrincipal.TabIndex = 11;
-            this.dgvPrincipal.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPrincipal_CellContentClick);
             // 
             // btnActualizar
             // 
-            this.btnActualizar.Location = new System.Drawing.Point(968, 473);
+            this.btnActualizar.Location = new System.Drawing.Point(947, 156);
             this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(217, 185);
+            this.btnActualizar.Size = new System.Drawing.Size(217, 273);
             this.btnActualizar.TabIndex = 12;
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.UseVisualStyleBackColor = true;
@@ -121,10 +121,10 @@ namespace vista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1290, 751);
+            this.ClientSize = new System.Drawing.Size(1203, 517);
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.dgvPrincipal);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnVender);
             this.Controls.Add(this.btnCargarAccesorio);
             this.Controls.Add(this.btnCargarInstrumento);
             this.Controls.Add(this.panel1);
@@ -143,7 +143,7 @@ namespace vista
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnCargarInstrumento;
         private System.Windows.Forms.Button btnCargarAccesorio;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnVender;
         private System.Windows.Forms.DataGridView dgvPrincipal;
         private System.Windows.Forms.Button btnActualizar;
     }
