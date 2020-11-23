@@ -32,12 +32,12 @@ namespace vista
             this.dgvGrilla = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxBuscar = new System.Windows.Forms.TextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.SeleccionInstrumentos = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.btnSeleccionProductos = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrilla)).BeginInit();
-            this.panel1.SuspendLayout();
+            this.SeleccionInstrumentos.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvGrilla
@@ -70,15 +70,15 @@ namespace vista
             this.textBoxBuscar.Size = new System.Drawing.Size(304, 26);
             this.textBoxBuscar.TabIndex = 12;
             // 
-            // panel1
+            // SeleccionInstrumentos
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(55)))), ((int)(((byte)(72)))));
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1166, 126);
-            this.panel1.TabIndex = 13;
+            this.SeleccionInstrumentos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(55)))), ((int)(((byte)(72)))));
+            this.SeleccionInstrumentos.Controls.Add(this.label3);
+            this.SeleccionInstrumentos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.SeleccionInstrumentos.Location = new System.Drawing.Point(0, 0);
+            this.SeleccionInstrumentos.Name = "SeleccionInstrumentos";
+            this.SeleccionInstrumentos.Size = new System.Drawing.Size(1166, 126);
+            this.SeleccionInstrumentos.TabIndex = 13;
             // 
             // label3
             // 
@@ -122,15 +122,15 @@ namespace vista
             this.ClientSize = new System.Drawing.Size(1166, 667);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.btnSeleccionProductos);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.SeleccionInstrumentos);
             this.Controls.Add(this.textBoxBuscar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvGrilla);
             this.Name = "SeleccionDeInstrumentos";
             this.Text = "Seleccione productos...";
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrilla)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.SeleccionInstrumentos.ResumeLayout(false);
+            this.SeleccionInstrumentos.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -141,7 +141,7 @@ namespace vista
         private System.Windows.Forms.DataGridView dgvGrilla;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBoxBuscar;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel SeleccionInstrumentos;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnSeleccionProductos;
         private System.Windows.Forms.Button btnBuscar;

@@ -15,11 +15,13 @@ namespace vista
 
         public SqlDataAdapter da;
         public DataTable dt;
-        public   DataTable aux; 
-      
+        public DataTable aux;
+
 
         public SeleccionDeInstrumentos frmSeleccionar;
         public SeleccionDeAccesorios frmSeleccionarAccesorio;
+
+
         public Thread hiloPrincipal;
         public Producto productoSeleccionado;
 
@@ -30,11 +32,16 @@ namespace vista
 
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
+
+
+
             hiloPrincipal = new Thread(SeleccionarProducto);
-            ConfigurarGrilla();   
+            ConfigurarGrilla();
             configuracionDataTable();
-            aux =new DataTable();
+            aux = new DataTable();
             this.aux = this.dt.Clone();
+
+
 
 
 
@@ -42,11 +49,16 @@ namespace vista
 
         private void btnCargarInstrumento_Click(object sender, EventArgs e)
         {
-            this.frmSeleccionar = new SeleccionDeInstrumentos();
+           this.frmSeleccionar = new SeleccionDeInstrumentos();
             this.frmSeleccionar.Show();
 
         }
 
+           private void btnCargarAccesorio_Click(object sender, EventArgs e)
+        {
+            this.frmSeleccionarAccesorio = new SeleccionDeAccesorios();
+            this.frmSeleccionarAccesorio.Show();
+        }
 
         public void configuracionDataTable()
         {
@@ -55,16 +67,16 @@ namespace vista
             this.dt.Columns.Add("id", typeof(int));
             this.dt.Columns.Add("nombre", typeof(string));
             this.dt.Columns.Add("precio", typeof(float));
-            
 
 
-          ///  this.dt.PrimaryKey = new DataColumn[] { this.dt.Columns[0] };
+
+            ///  this.dt.PrimaryKey = new DataColumn[] { this.dt.Columns[0] };
 
             this.dt.Columns["id"].AutoIncrement = true;
             this.dt.Columns["id"].AutoIncrementSeed = 1;//obtener el último id insertado en la tabla
             this.dt.Columns["id"].AutoIncrementStep = 1;
-        
-           
+
+
 
         }
 
@@ -115,18 +127,18 @@ namespace vista
             this.dgvPrincipal.RowHeadersVisible = false;
 
 
-           
+
 
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
             /// Aca inicializar hilo
-           hiloPrincipal = new Thread(SeleccionarProducto);
+            hiloPrincipal = new Thread(SeleccionarProducto);
             if (!hiloPrincipal.IsAlive)
             {
                 hiloPrincipal.Start();
-              
+
             }
             else
             {
@@ -139,26 +151,26 @@ namespace vista
 
         private void SeleccionarProducto()
         {
-           
+
 
             if (this.dgvPrincipal.InvokeRequired)
             {
 
                 this.dgvPrincipal.BeginInvoke((MethodInvoker)delegate ()
                 {
+           
+                  if (Form.Equals(this.frmSeleccionar, null)){
 
-                   
-                   
-                                        this.aux.ImportRow(this.frmSeleccionarAccesorio.dt.Rows[0]);     //no tocar  
-                   //                     this.aux.ImportRow(this.frmSeleccionar.dt.Rows[0]);     //no tocar  
-
-                  
-                    
-
-                   
+                     this.aux.ImportRow(this.frmSeleccionarAccesorio.dt.Rows[0]);
+                    }
+                    else
+                    {
+                        this.aux.ImportRow(this.frmSeleccionar.dt.Rows[0]);
+                        frmSeleccionar = null;
+                    }
 
                     this.dgvPrincipal.DataSource = aux;
-                    this.aux = (DataTable) this.dgvPrincipal.DataSource;
+                    this.aux = (DataTable)this.dgvPrincipal.DataSource;
                 });
 
             }
@@ -177,10 +189,6 @@ namespace vista
 
         }
 
-        private void btnCargarAccesorio_Click(object sender, EventArgs e)
-        {
-            this.frmSeleccionarAccesorio = new SeleccionDeAccesorios();
-            this.frmSeleccionarAccesorio.Show();
-        }
+     
     }
 }
