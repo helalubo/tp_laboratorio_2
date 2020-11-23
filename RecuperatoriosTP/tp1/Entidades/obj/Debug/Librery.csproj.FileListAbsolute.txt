@@ -1,0 +1,6 @@
+C:\Users\User\Desktop\UTN\TPs_lab\TPs.DeMoraiz.Alejandro\Entidades\bin\Debug\Librery.dll
+C:\Users\User\Desktop\UTN\TPs_lab\TPs.DeMoraiz.Alejandro\Entidades\bin\Debug\Librery.pdb
+C:\Users\User\Desktop\UTN\TPs_lab\TPs.DeMoraiz.Alejandro\Entidades\obj\Debug\Librery.csprojAssemblyReference.cache
+C:\Users\User\Desktop\UTN\TPs_lab\TPs.DeMoraiz.Alejandro\Entidades\obj\Debug\Librery.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\UTN\TPs_lab\TPs.DeMoraiz.Alejandro\Entidades\obj\Debug\Librery.dll
+C:\Users\User\Desktop\UTN\TPs_lab\TPs.DeMoraiz.Alejandro\Entidades\obj\Debug\Librery.pdb

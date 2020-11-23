@@ -54,7 +54,7 @@ namespace vista
             this.dt.Columns.Add("id", typeof(int));
             this.dt.Columns.Add("nombre", typeof(string));
             this.dt.Columns.Add("precio", typeof(float));
-            this.dt.Columns.Add("cantidad", typeof(int));
+            //this.dt.Columns.Add("cantidad", typeof(int));
 
 
           ///  this.dt.PrimaryKey = new DataColumn[] { this.dt.Columns[0] };
@@ -62,6 +62,7 @@ namespace vista
             this.dt.Columns["id"].AutoIncrement = true;
             this.dt.Columns["id"].AutoIncrementSeed = 1;//obtener el último id insertado en la tabla
             this.dt.Columns["id"].AutoIncrementStep = 1;
+        
 
         }
 

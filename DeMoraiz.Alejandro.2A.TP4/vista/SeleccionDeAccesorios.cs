@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace vista
 {
-    public partial class SeleccionDeAccesorios : SeleccionDeInstrumentos
+    public partial class SeleccionDeAccesorios : Form
     {
         public SeleccionDeAccesorios()
         {
