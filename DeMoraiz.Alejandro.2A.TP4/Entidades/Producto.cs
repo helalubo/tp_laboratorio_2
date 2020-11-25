@@ -40,11 +40,19 @@
 
 
         #endregion
+
+
+        #region Propiedades 
+
         public int ID
         {
             get
             {
                 return this.id;
+            }
+            set
+            {
+                this.id = value;
             }
         }
 
@@ -78,7 +86,7 @@
         }
 
 
-        public int Stock
+        public int Cantidad
         {
 
             get
@@ -91,6 +99,11 @@
                 this.cantidad = value;
             }
         }
+
+        #endregion 
+
+
+
 
 
     }

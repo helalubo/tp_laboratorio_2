@@ -1,5 +1,7 @@
 ﻿using Entidades;
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
@@ -23,8 +25,52 @@ namespace vista
 
 
         public Thread hiloPrincipal;
-        public Producto productoSeleccionado;
+      
 
+
+
+
+
+        public List<Producto> ProductosSeleccionados
+        {
+
+
+
+            get
+            {
+
+
+                List<Producto> listaDeProductos = new List<Producto>();
+
+
+
+                foreach (DataRow fila in aux.Rows)
+                {
+                    Producto producto = new Producto();
+
+                    producto.ID = (int)(fila["id"]);
+                    producto.Nombre = (string)(fila["nombre"]);
+                    producto.Precio = (float)(fila["precio"]);
+                    producto.Cantidad = 1;
+
+
+                    listaDeProductos.Add(producto);
+
+
+
+                }
+
+
+
+               
+
+                return listaDeProductos;
+
+
+
+            }
+
+        }
 
 
         public frmPrincipal()
@@ -188,6 +234,11 @@ namespace vista
 
         private void btnVender_Click(object sender, EventArgs e)
         {
+
+            List<Producto> productos = ProductosSeleccionados;
+
+
+           
 
         }
     }
