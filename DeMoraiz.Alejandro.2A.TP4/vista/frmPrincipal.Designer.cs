@@ -36,6 +36,8 @@ namespace vista
             this.btnVender = new System.Windows.Forms.Button();
             this.dgvPrincipal = new System.Windows.Forms.DataGridView();
             this.btnActualizar = new System.Windows.Forms.Button();
+            this.textPago = new System.Windows.Forms.TextBox();
+            this.lblImporte = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrincipal)).BeginInit();
             this.SuspendLayout();
@@ -55,7 +57,7 @@ namespace vista
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(42, 42);
+            this.label1.Location = new System.Drawing.Point(24, 41);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(534, 46);
             this.label1.TabIndex = 0;
@@ -89,7 +91,7 @@ namespace vista
             this.btnVender.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(107)))), ((int)(((byte)(33)))));
             this.btnVender.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVender.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnVender.Location = new System.Drawing.Point(947, 441);
+            this.btnVender.Location = new System.Drawing.Point(959, 441);
             this.btnVender.Name = "btnVender";
             this.btnVender.Size = new System.Drawing.Size(217, 54);
             this.btnVender.TabIndex = 4;
@@ -109,19 +111,39 @@ namespace vista
             // 
             // btnActualizar
             // 
-            this.btnActualizar.Location = new System.Drawing.Point(947, 156);
+            this.btnActualizar.Location = new System.Drawing.Point(959, 145);
             this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(217, 273);
+            this.btnActualizar.Size = new System.Drawing.Size(217, 62);
             this.btnActualizar.TabIndex = 12;
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.UseVisualStyleBackColor = true;
             this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
+            // 
+            // textPago
+            // 
+            this.textPago.Location = new System.Drawing.Point(959, 398);
+            this.textPago.Name = "textPago";
+            this.textPago.Size = new System.Drawing.Size(217, 26);
+            this.textPago.TabIndex = 15;
+            // 
+            // lblImporte
+            // 
+            this.lblImporte.AutoSize = true;
+            this.lblImporte.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblImporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblImporte.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.lblImporte.Location = new System.Drawing.Point(965, 255);
+            this.lblImporte.Name = "lblImporte";
+            this.lblImporte.Size = new System.Drawing.Size(0, 46);
+            this.lblImporte.TabIndex = 14;
             // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1203, 517);
+            this.Controls.Add(this.textPago);
+            this.Controls.Add(this.lblImporte);
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.dgvPrincipal);
             this.Controls.Add(this.btnVender);
@@ -130,10 +152,12 @@ namespace vista
             this.Controls.Add(this.panel1);
             this.Name = "frmPrincipal";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.frmPrincipal_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrincipal)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -146,6 +170,8 @@ namespace vista
         private System.Windows.Forms.Button btnVender;
         private System.Windows.Forms.DataGridView dgvPrincipal;
         private System.Windows.Forms.Button btnActualizar;
+        private System.Windows.Forms.TextBox textPago;
+        private System.Windows.Forms.Label lblImporte;
     }
 }
 

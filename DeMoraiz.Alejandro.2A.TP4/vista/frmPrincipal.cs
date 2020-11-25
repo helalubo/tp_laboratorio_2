@@ -7,6 +7,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Threading;
 using System.Windows.Forms;
+using static Entidades.Venta;
 
 namespace vista
 {
@@ -25,10 +26,39 @@ namespace vista
 
 
         public Thread hiloPrincipal;
-      
+
+        DelegadoDeVenta miDelegadoDeVenta;
+
+
+        public string ImporteDeVenta
+        {
 
 
 
+            get
+            {
+
+                float cantidad = 0;
+
+                foreach (Producto producto in ProductosSeleccionados)
+                {
+
+
+                    cantidad += producto.Precio;
+
+                }
+
+
+
+
+
+                return cantidad.ToString();
+
+
+
+
+            }
+        }
 
 
         public List<Producto> ProductosSeleccionados
@@ -78,6 +108,13 @@ namespace vista
 
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
+
+            
+
+           
+
+            
+
 
 
 
@@ -180,6 +217,11 @@ namespace vista
         private void btnActualizar_Click(object sender, EventArgs e)
         {
             /// Aca inicializar hilo
+            /// 
+
+          
+
+
             hiloPrincipal = new Thread(SeleccionarProducto);
             if (!hiloPrincipal.IsAlive)
             {
@@ -192,6 +234,8 @@ namespace vista
 
             }
 
+
+    
         }
 
 
@@ -216,6 +260,7 @@ namespace vista
                     }
 
                     this.dgvPrincipal.DataSource = aux;
+                    this.lblImporte.Text = ImporteDeVenta; //////////////////
                     this.aux = (DataTable)this.dgvPrincipal.DataSource;
                 });
 
@@ -238,7 +283,14 @@ namespace vista
             List<Producto> productos = ProductosSeleccionados;
 
 
-           
+            //this.miDelegadoDeVenta = new DelegadoDeVenta(modificarStock);
+
+
+
+        }
+
+        private void frmPrincipal_Load(object sender, EventArgs e)
+        {
 
         }
     }
