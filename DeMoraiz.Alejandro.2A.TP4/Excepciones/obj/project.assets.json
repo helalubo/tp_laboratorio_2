@@ -25,37 +25,6 @@
         "build": {
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
-      },
-      "CapaDatos/1.0.0": {
-        "type": "project",
-        "compile": {
-          "bin/placeholder/CapaDatos.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/CapaDatos.dll": {}
-        }
-      },
-      "Entidades/1.0.0": {
-        "type": "project",
-        "compile": {
-          "bin/placeholder/Entidades.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Entidades.dll": {}
-        }
-      },
-      "vista/1.0.0": {
-        "type": "project",
-        "dependencies": {
-          "CapaDatos": "1.0.0",
-          "Entidades": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/vista.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/vista.dll": {}
-        }
       }
     }
   },
@@ -203,29 +172,11 @@
         "netstandard.library.2.0.3.nupkg.sha512",
         "netstandard.library.nuspec"
       ]
-    },
-    "CapaDatos/1.0.0": {
-      "type": "project",
-      "path": "../CapaDatos/CapaDatos.csproj",
-      "msbuildProject": "../CapaDatos/CapaDatos.csproj"
-    },
-    "Entidades/1.0.0": {
-      "type": "project",
-      "path": "../Entidades/Entidades.csproj",
-      "msbuildProject": "../Entidades/Entidades.csproj"
-    },
-    "vista/1.0.0": {
-      "type": "project",
-      "path": "../vista/vista.csproj",
-      "msbuildProject": "../vista/vista.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
-      "CapaDatos >= 1.0.0",
-      "Entidades >= 1.0.0",
-      "NETStandard.Library >= 2.0.3",
-      "vista >= 1.0.0"
+      "NETStandard.Library >= 2.0.3"
     ]
   },
   "packageFolders": {
@@ -254,17 +205,7 @@
       "frameworks": {
         "netstandard2.0": {
           "targetAlias": "netstandard2.0",
-          "projectReferences": {
-            "C:\\Users\\User\\Desktop\\UTN\\tp_laboratorio_2\\DeMoraiz.Alejandro.2A.TP4\\CapaDatos\\CapaDatos.csproj": {
-              "projectPath": "C:\\Users\\User\\Desktop\\UTN\\tp_laboratorio_2\\DeMoraiz.Alejandro.2A.TP4\\CapaDatos\\CapaDatos.csproj"
-            },
-            "C:\\Users\\User\\Desktop\\UTN\\tp_laboratorio_2\\DeMoraiz.Alejandro.2A.TP4\\Entidades\\Entidades.csproj": {
-              "projectPath": "C:\\Users\\User\\Desktop\\UTN\\tp_laboratorio_2\\DeMoraiz.Alejandro.2A.TP4\\Entidades\\Entidades.csproj"
-            },
-            "C:\\Users\\User\\Desktop\\UTN\\tp_laboratorio_2\\DeMoraiz.Alejandro.2A.TP4\\vista\\vista.csproj": {
-              "projectPath": "C:\\Users\\User\\Desktop\\UTN\\tp_laboratorio_2\\DeMoraiz.Alejandro.2A.TP4\\vista\\vista.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {

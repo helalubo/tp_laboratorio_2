@@ -1,4 +1,5 @@
 ﻿using Entidades;
+
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -287,29 +288,32 @@ namespace vista
 
 
 
-           
 
-            if (float.Parse(this.textPago.Text) <= float.Parse(ImporteDeVenta))
+
+
+            if (float.Parse(this.textPago.Text) >= float.Parse(ImporteDeVenta) )
             {
-                string fallo = "El importe a abonar es mayor al monto de pago cargado.";
+               
+            List<Producto> productos = ProductosSeleccionados;
 
-
-                MessageBox.Show(fallo);
-                
+                MessageBox.Show("valor ok");
 
             }
             else
             {
-            List<Producto> productos = ProductosSeleccionados;
-                
-                
-                
-                
-                MessageBox.Show("valor ok");
+
+
+
+
+                string fallo = "El importe a abonar es mayor al monto de pago cargado.";
+
+
+                MessageBox.Show(fallo);
                 ///poner delegado con eventos
             }
 
 
+            
             
 
 

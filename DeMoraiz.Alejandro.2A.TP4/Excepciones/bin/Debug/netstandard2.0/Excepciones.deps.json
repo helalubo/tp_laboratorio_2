@@ -9,10 +9,7 @@
     ".NETStandard,Version=v2.0/": {
       "Excepciones/1.0.0": {
         "dependencies": {
-          "CapaDatos": "1.0.0",
-          "Entidades": "1.0.0",
-          "NETStandard.Library": "2.0.3",
-          "vista": "1.0.0"
+          "NETStandard.Library": "2.0.3"
         },
         "runtime": {
           "Excepciones.dll": {}
@@ -22,25 +19,6 @@
       "NETStandard.Library/2.0.3": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.1.0"
-        }
-      },
-      "CapaDatos/1.0.0": {
-        "runtime": {
-          "CapaDatos.dll": {}
-        }
-      },
-      "Entidades/1.0.0": {
-        "runtime": {
-          "Entidades.dll": {}
-        }
-      },
-      "vista/1.0.0": {
-        "dependencies": {
-          "CapaDatos": "1.0.0",
-          "Entidades": "1.0.0"
-        },
-        "runtime": {
-          "vista.exe": {}
         }
       }
     }
@@ -64,21 +42,6 @@
       "sha512": "sha512-st47PosZSHrjECdjeIzZQbzivYBJFv6P2nv4cj2ypdI204DO+vZ7l5raGMiX4eXMJ53RfOIg+/s4DHVZ54Nu2A==",
       "path": "netstandard.library/2.0.3",
       "hashPath": "netstandard.library.2.0.3.nupkg.sha512"
-    },
-    "CapaDatos/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Entidades/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "vista/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
     }
   }
 }
