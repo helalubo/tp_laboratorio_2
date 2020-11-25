@@ -1,5 +1,5 @@
 ﻿using Entidades;
-
+using Excepciones;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -63,7 +63,7 @@ namespace vista
 
         //(string)(((float)(this.textPago.Text) -(float)(ImporteDeVenta)) );
 
-      
+
 
         public List<Producto> ProductosSeleccionados
         {
@@ -85,7 +85,7 @@ namespace vista
                     producto.ID = (int)(fila["id"]);
                     producto.Nombre = (string)(fila["nombre"]);
                     producto.Precio = (float)(fila["precio"]);
-                    producto.Cantidad = 1;
+                    producto.Cantidad = (int)(fila["cantidad"]);
 
 
                     listaDeProductos.Add(producto);
@@ -154,8 +154,8 @@ namespace vista
             this.dt.Columns.Add("id", typeof(int));
             this.dt.Columns.Add("nombre", typeof(string));
             this.dt.Columns.Add("precio", typeof(float));
-
-
+            this.dt.Columns.Add("cantidad", typeof(int));
+            //       producto.Cantidad = (int)(fila["cantidad"]);
 
             ///  this.dt.PrimaryKey = new DataColumn[] { this.dt.Columns[0] };
 
@@ -266,7 +266,7 @@ namespace vista
 
                     this.dgvPrincipal.DataSource = aux;
                     this.lblImporte.Text = ImporteDeVenta;
-                  
+
                     this.aux = (DataTable)this.dgvPrincipal.DataSource;
                 });
 
@@ -291,12 +291,33 @@ namespace vista
 
 
 
-            if (float.Parse(this.textPago.Text) >= float.Parse(ImporteDeVenta) )
+            if (float.Parse(this.textPago.Text) >= float.Parse(ImporteDeVenta))
             {
-               
-            List<Producto> productos = ProductosSeleccionados;
 
-                MessageBox.Show("valor ok");
+                List<Producto> productos = ProductosSeleccionados;
+
+                //inicializo al delegado
+                miDelegadoDeVenta = new DelegadoDeVenta(Venta.VerificarStock);
+
+
+
+                try
+                {
+                    miDelegadoDeVenta.Invoke(productos);
+
+                }
+                catch (SobrepasaStockException  e1)
+                {
+                    MessageBox.Show(e1.Message);
+                }
+                finally
+                {
+                    this.aux.Clear();
+                }
+
+
+
+
 
             }
             else
@@ -313,8 +334,8 @@ namespace vista
             }
 
 
-            
-            
+
+
 
 
             //this.miDelegadoDeVenta = new DelegadoDeVenta(modificarStock);
