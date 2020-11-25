@@ -121,10 +121,11 @@ namespace vista
             // 
             // textPago
             // 
-            this.textPago.Location = new System.Drawing.Point(959, 398);
+            this.textPago.Location = new System.Drawing.Point(959, 222);
             this.textPago.Name = "textPago";
             this.textPago.Size = new System.Drawing.Size(217, 26);
             this.textPago.TabIndex = 15;
+            this.textPago.Text = "0";
             // 
             // lblImporte
             // 
@@ -132,7 +133,7 @@ namespace vista
             this.lblImporte.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblImporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblImporte.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.lblImporte.Location = new System.Drawing.Point(965, 255);
+            this.lblImporte.Location = new System.Drawing.Point(985, 279);
             this.lblImporte.Name = "lblImporte";
             this.lblImporte.Size = new System.Drawing.Size(0, 46);
             this.lblImporte.TabIndex = 14;

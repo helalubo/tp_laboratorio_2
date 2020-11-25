@@ -1,12 +1,12 @@
 ﻿using Entidades;
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Threading;
 using System.Windows.Forms;
+
 using static Entidades.Venta;
 
 namespace vista
@@ -60,6 +60,9 @@ namespace vista
             }
         }
 
+        //(string)(((float)(this.textPago.Text) -(float)(ImporteDeVenta)) );
+
+      
 
         public List<Producto> ProductosSeleccionados
         {
@@ -92,7 +95,7 @@ namespace vista
 
 
 
-               
+
 
                 return listaDeProductos;
 
@@ -109,11 +112,11 @@ namespace vista
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
 
-            
 
-           
 
-            
+
+
+
 
 
 
@@ -132,12 +135,12 @@ namespace vista
 
         private void btnCargarInstrumento_Click(object sender, EventArgs e)
         {
-           this.frmSeleccionar = new SeleccionDeInstrumentos();
+            this.frmSeleccionar = new SeleccionDeInstrumentos();
             this.frmSeleccionar.Show();
 
         }
 
-           private void btnCargarAccesorio_Click(object sender, EventArgs e)
+        private void btnCargarAccesorio_Click(object sender, EventArgs e)
         {
             this.frmSeleccionarAccesorio = new SeleccionDeAccesorios();
             this.frmSeleccionarAccesorio.Show();
@@ -219,7 +222,7 @@ namespace vista
             /// Aca inicializar hilo
             /// 
 
-          
+
 
 
             hiloPrincipal = new Thread(SeleccionarProducto);
@@ -235,7 +238,7 @@ namespace vista
             }
 
 
-    
+
         }
 
 
@@ -248,10 +251,11 @@ namespace vista
 
                 this.dgvPrincipal.BeginInvoke((MethodInvoker)delegate ()
                 {
-           
-                  if (Form.Equals(this.frmSeleccionar, null)){
 
-                     this.aux.ImportRow(this.frmSeleccionarAccesorio.dt.Rows[0]);
+                    if (Form.Equals(this.frmSeleccionar, null))
+                    {
+
+                        this.aux.ImportRow(this.frmSeleccionarAccesorio.dt.Rows[0]);
                     }
                     else
                     {
@@ -260,7 +264,8 @@ namespace vista
                     }
 
                     this.dgvPrincipal.DataSource = aux;
-                    this.lblImporte.Text = ImporteDeVenta; //////////////////
+                    this.lblImporte.Text = ImporteDeVenta;
+                  
                     this.aux = (DataTable)this.dgvPrincipal.DataSource;
                 });
 
@@ -275,12 +280,37 @@ namespace vista
             }
         }
 
-    
+
 
         private void btnVender_Click(object sender, EventArgs e)
         {
 
+
+
+           
+
+            if (float.Parse(this.textPago.Text) <= float.Parse(ImporteDeVenta))
+            {
+                string fallo = "El importe a abonar es mayor al monto de pago cargado.";
+
+
+                MessageBox.Show(fallo);
+                
+
+            }
+            else
+            {
             List<Producto> productos = ProductosSeleccionados;
+                
+                
+                
+                
+                MessageBox.Show("valor ok");
+                ///poner delegado con eventos
+            }
+
+
+            
 
 
             //this.miDelegadoDeVenta = new DelegadoDeVenta(modificarStock);
