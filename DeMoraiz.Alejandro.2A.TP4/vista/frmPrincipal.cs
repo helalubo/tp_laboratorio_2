@@ -313,6 +313,8 @@ namespace vista
                 finally
                 {
                     this.aux.Clear();
+                    this.textPago.Clear();
+                    this.lblImporte.Text = "";
                 }
 
 

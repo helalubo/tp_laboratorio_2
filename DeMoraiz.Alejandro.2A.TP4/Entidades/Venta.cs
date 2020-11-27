@@ -1,5 +1,6 @@
 ﻿using Excepciones;
 using System.Collections.Generic;
+using System.Text;
 
 namespace Entidades
 {
@@ -59,6 +60,24 @@ namespace Entidades
 
         public void modificarStock(List<Producto> listaDeProductos)
         {
+
+
+            ///crear objetos para entrar a base de datos asi puedo configurar la cantidad. 
+            /////verificar si el id es menor de 10000, si lo es entonces hacer query de instrumentos, sino hara query de Accesorios
+            /////agregar or id = {producto.id}
+            ///
+
+
+
+            StringBuilder sbAccesorios = new StringBuilder();
+            StringBuilder sbInsrumentos = new StringBuilder();
+            sbAccesorios.Append(" UPDATE [Producto].[dbo].[Accesorios]SET cantidad = cantidad - 1 WHERE = ");
+            sbInsrumentos.Append(" UPDATE [Producto].[dbo].[Instrumento]SET cantidad = cantidad - 1 WHERE = ");
+
+
+            //recorro todo con un for each, pregunto si el id del objeto es menor o mayor a 10000 y lo agrego en listas diferentes.
+            //luego estas listas las uso para pasar los id = { accesorio.id}; el ultimo ////String cadena = "123456789";
+            //cadena = cadena.substring(0, cadena.length() - 2);
 
 
         }
