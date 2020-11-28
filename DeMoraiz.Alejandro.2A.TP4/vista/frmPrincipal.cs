@@ -298,6 +298,7 @@ namespace vista
 
                 //inicializo al delegado
                 miDelegadoDeVenta = new DelegadoDeVenta(Venta.VerificarStock);
+                miDelegadoDeVenta += Venta.modificarStock;
 
 
 

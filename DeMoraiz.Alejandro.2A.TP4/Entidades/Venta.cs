@@ -1,4 +1,6 @@
-﻿using Excepciones;
+﻿using CapaDatos;
+using Excepciones;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -41,24 +43,24 @@ namespace Entidades
                 }
 
 
-               
-                    if (listaDeProductos[i].Cantidad < cont)
-                    {
-                        string fallo = "uno de los articulos sobrepasa el stock";
+
+                if (listaDeProductos[i].Cantidad < cont)
+                {
+                    string fallo = "uno de los articulos sobrepasa el stock";
 
 
-                        throw new SobrepasaStockException(fallo);
+                    throw new SobrepasaStockException(fallo);
 
-                    }
+                }
 
-              
+
 
             }
 
 
         }
 
-        public void modificarStock(List<Producto> listaDeProductos)
+        public static  void modificarStock(List<Producto> listaDeProductos)
         {
 
 
@@ -71,8 +73,54 @@ namespace Entidades
 
             StringBuilder sbAccesorios = new StringBuilder();
             StringBuilder sbInsrumentos = new StringBuilder();
-            sbAccesorios.Append(" UPDATE [Producto].[dbo].[Accesorios]SET cantidad = cantidad - 1 WHERE = ");
-            sbInsrumentos.Append(" UPDATE [Producto].[dbo].[Instrumento]SET cantidad = cantidad - 1 WHERE = ");
+            //sbAccesorios.Append(" UPDATE [Producto].[dbo].[Accesorios]SET cantidad = cantidad - 1 WHERE  id = ");
+            //sbInsrumentos.Append(" UPDATE [Producto].[dbo].[Instrumento]SET cantidad = cantidad - 1 WHERE  id = ");
+
+            AccesoDatos conexion = new AccesoDatos();
+
+            try
+            {
+
+                conexion.Conexion.Open();
+
+
+
+
+                /////
+
+
+                foreach (Producto producoAux in listaDeProductos)
+                {
+                    sbAccesorios.Append(" UPDATE [Producto].[dbo].[Accesorios]SET cantidad = cantidad - 1 WHERE  id = ");
+                    sbInsrumentos.Append(" UPDATE [Producto].[dbo].[Instrumento]SET cantidad = cantidad - 1 WHERE  id = ");
+
+                    if (producoAux.ID < 10000)
+                    {
+                        sbInsrumentos.Append($"{producoAux.ID};");
+                        conexion.Comando.CommandText = sbInsrumentos.ToString();
+
+                    }
+                    else
+                    {
+                        sbAccesorios.Append($"{ producoAux.ID}; ");
+                        conexion.Comando.CommandText = sbAccesorios.ToString();
+                    }
+
+                    conexion.Comando.ExecuteNonQuery();
+                    sbInsrumentos.Clear();
+                    sbAccesorios.Clear();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.Write(ex.Message);
+            }
+            finally
+            {
+                conexion.Conexion.Close();
+            }
+
+
 
 
             //recorro todo con un for each, pregunto si el id del objeto es menor o mayor a 10000 y lo agrego en listas diferentes.

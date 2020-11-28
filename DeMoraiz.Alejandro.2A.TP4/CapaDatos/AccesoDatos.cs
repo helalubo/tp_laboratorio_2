@@ -21,6 +21,10 @@ namespace CapaDatos
         public AccesoDatos()
         {
             this.conexion = new SqlConnection(Properties.Settings.Default.ProductosBD);
+            this.comando = new SqlCommand();
+            comando.CommandType = System.Data.CommandType.Text;
+            comando.Connection = this.conexion;
+           
         }
 
         #endregion
@@ -37,12 +41,21 @@ namespace CapaDatos
 
         }
 
+        public SqlCommand Comando
+        {
+            get
+            {
+                return this.comando ;
+            }
+
+        }
+
         #endregion
 
 
-        
 
-       
+
+
 
     }
 }

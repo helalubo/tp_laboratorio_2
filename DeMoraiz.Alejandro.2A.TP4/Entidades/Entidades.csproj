@@ -48,6 +48,10 @@
     <Compile Include="Venta.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CapaDatos\CapaDatos.csproj">
+      <Project>{cb9002ea-6f92-44e1-9c14-b0ad41eff677}</Project>
+      <Name>CapaDatos</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Excepciones\Excepciones.csproj">
       <Project>{6ecd002c-dacb-4782-9028-a4991fe3ea76}</Project>
       <Name>Excepciones</Name>

@@ -81,12 +81,14 @@ namespace vista
 
 
                 rta = true;
+                accesoADatos.Conexion.Close();
             }
             catch (Exception ex)
             {
 
                 MessageBox.Show(ex.Message);
             }
+            
 
             return rta;
         }
