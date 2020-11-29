@@ -121,7 +121,7 @@ namespace vista
             // 
             // textPago
             // 
-            this.textPago.Location = new System.Drawing.Point(959, 316);
+            this.textPago.Location = new System.Drawing.Point(959, 393);
             this.textPago.Name = "textPago";
             this.textPago.Size = new System.Drawing.Size(217, 26);
             this.textPago.TabIndex = 15;
@@ -133,7 +133,7 @@ namespace vista
             this.lblImporte.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblImporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblImporte.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.lblImporte.Location = new System.Drawing.Point(985, 279);
+            this.lblImporte.Location = new System.Drawing.Point(980, 328);
             this.lblImporte.Name = "lblImporte";
             this.lblImporte.Size = new System.Drawing.Size(0, 46);
             this.lblImporte.TabIndex = 14;
@@ -142,7 +142,7 @@ namespace vista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1203, 602);
+            this.ClientSize = new System.Drawing.Size(1203, 506);
             this.Controls.Add(this.textPago);
             this.Controls.Add(this.lblImporte);
             this.Controls.Add(this.btnActualizar);

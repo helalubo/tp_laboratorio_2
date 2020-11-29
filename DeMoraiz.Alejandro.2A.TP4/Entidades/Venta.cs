@@ -16,7 +16,7 @@ namespace Entidades
 
         public static  event DelegadoDeVenta EventoTicket;
 
-        
+   
 
         public Venta()
         {

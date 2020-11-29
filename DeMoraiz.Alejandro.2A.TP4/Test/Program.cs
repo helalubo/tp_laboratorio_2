@@ -58,25 +58,15 @@ namespace Test
 
                 Venta.modificarStock(productos);
                 Console.Write("Se modifico el stock correctamente \n");
-
-            }
-            catch (SobrepasaStockException e)
-            {
-                Console.Write(e.Message);
-            }
-
-            ///Hago ticket de la venta
-            try
-            {
-
-                Venta.TXTTicket(productos);
-                Console.Write("Se creo el ticket correctamente \n");
+                Console.Write("Se creo Ticket correctamente.");
 
             }
             catch (Exception e)
             {
                 Console.Write(e.Message);
             }
+
+          
 
 
            
