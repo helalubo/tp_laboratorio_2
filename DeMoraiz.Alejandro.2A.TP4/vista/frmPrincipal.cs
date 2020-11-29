@@ -300,22 +300,32 @@ namespace vista
                 miDelegadoDeVenta = new DelegadoDeVenta(Venta.VerificarStock);
                 miDelegadoDeVenta += Venta.modificarStock;
 
+                Venta.EventoTicket += TXTTicket;
 
+       
 
+               
                 try
                 {
                     miDelegadoDeVenta.Invoke(productos);
+                    
+                    
 
                 }
                 catch (SobrepasaStockException  e1)
                 {
                     MessageBox.Show(e1.Message);
                 }
+                catch(Exception e2)
+                {
+                    MessageBox.Show(e2.Message);
+                }
                 finally
                 {
                     this.aux.Clear();
                     this.textPago.Clear();
                     this.lblImporte.Text = "";
+
                 }
 
 

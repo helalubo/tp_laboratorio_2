@@ -1,4 +1,5 @@
 ﻿using CapaDatos;
+using Archivos;
 using Excepciones;
 using System;
 using System.Collections.Generic;
@@ -12,9 +13,9 @@ namespace Entidades
         public delegate void DelegadoDeVenta(List<Producto> listaDeProductos);
 
 
+        public static  event DelegadoDeVenta EventoTicket;
 
-
-
+       
 
         public static void VerificarStock(List<Producto> listaDeProductos)
         {
@@ -113,29 +114,65 @@ namespace Entidades
             }
             catch (Exception ex)
             {
-                Console.Write(ex.Message);
+                //Console.Write(ex.Message);
+                string fallo = "No se pudo conectar la base de datos";
+                throw new Exception(fallo);
             }
             finally
             {
                 conexion.Conexion.Close();
+                EventoTicket(listaDeProductos);
             }
 
 
 
 
-            //recorro todo con un for each, pregunto si el id del objeto es menor o mayor a 10000 y lo agrego en listas diferentes.
-            //luego estas listas las uso para pasar los id = { accesorio.id}; el ultimo ////String cadena = "123456789";
-            //cadena = cadena.substring(0, cadena.length() - 2);
+      
 
 
         }
 
 
-        public void TXTTicket(List<Producto> listaDeProductos)
+        public static void TXTTicket(List<Producto> listaDeProductos)
         {
 
+            float precioTotal = 0;
+
+          
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine("                  Empresa xxxxx                  ");
+            sb.AppendLine("            ****************************         ");
+            sb.AppendLine("                                                 ");
+            sb.AppendLine("                Factura de Venta                 ");
+            sb.AppendLine("No Fac:                                          ");
+            sb.AppendLine($"Fecha: {DateTime.Now}                           ");
+            sb.AppendLine("Fue atendido:                                    ");
+            sb.AppendLine("                                                 ");
+            sb.AppendLine("-------------------------------------------------");
+            sb.AppendLine("Articulo               Cant        P.Unit        ");
+            sb.AppendLine("-------------------------------------------------");
+
+            if (listaDeProductos != null)
+            {
+
+              
+
+                foreach (Producto aux in listaDeProductos)
+                {
+            sb.AppendLine($"{aux.Nombre}       1        ${aux.Precio}        "); 
+                }
+
+            }
+            sb.AppendLine("-------------------------------------------------");
+            sb.AppendLine($"Total                             ${precioTotal}");
+
+            Texto archivoTicket = new Texto(); 
+            string nombreArchivo = DateTime.Now.ToString();
+
+            archivoTicket.Guardar("Tickets.txt" , sb.ToString());
 
         }
+        /// C:\Users\User\Desktop\UTN\tp_laboratorio_2\DeMoraiz.Alejandro.2A.TP4\vista\bin\Debug
 
 
         public void XMLVentasRealizadas(List<Producto> listaDeProductos)

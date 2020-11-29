@@ -48,6 +48,10 @@
     <Compile Include="Venta.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Archivos\Archivos.csproj">
+      <Project>{44e546f6-8dde-45a7-8119-bd4750780dcb}</Project>
+      <Name>Archivos</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CapaDatos\CapaDatos.csproj">
       <Project>{cb9002ea-6f92-44e1-9c14-b0ad41eff677}</Project>
       <Name>CapaDatos</Name>
