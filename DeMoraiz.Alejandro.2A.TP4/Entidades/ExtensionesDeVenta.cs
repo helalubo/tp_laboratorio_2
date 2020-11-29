@@ -14,7 +14,7 @@ namespace Entidades
             StringBuilder sb = new StringBuilder();
 
 
-            sb.Append($"{DateTime.Now.Day.ToString()}{DateTime.Now.Month.ToString()}{DateTime.Now.Year.ToString()}{DateTime.Now.Hour.ToString()}{DateTime.Now.Minute.ToString()}{dato}");
+            sb.Append($"{DateTime.Now.Day}{DateTime.Now.Month}{DateTime.Now.Year}{DateTime.Now.Hour}{DateTime.Now.Minute}{dato}");
 
             //string fechaAux = DateTime.Now.Day.ToString() + DateTime.Now.Month.ToString() +DateTime.Now.Hour.ToString();
 

@@ -179,9 +179,13 @@ namespace Entidades
         public static void GuardarVentasEnXml(List<Producto> listaDeProductos)
         {
 
-            String nombreArchivoXml = "ArchivoVenta.xml";
+            String nombreArchivoXml = "ArticulosVendidos.xml";
             nombreArchivoXml = nombreArchivoXml.AgregarFecha();
 
+            foreach (Producto productoAux in listaDeProductos)
+            {
+                productoAux.Cantidad = 1;
+            }
 
 
             Xml<List<Producto>> ArchivoVenta = new Xml<List<Producto>>();
