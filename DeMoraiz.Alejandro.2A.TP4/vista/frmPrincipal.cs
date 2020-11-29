@@ -61,7 +61,7 @@ namespace vista
             }
         }
 
-        //(string)(((float)(this.textPago.Text) -(float)(ImporteDeVenta)) );
+       
 
 
 
@@ -224,6 +224,7 @@ namespace vista
             /// 
 
 
+            
 
 
             hiloPrincipal = new Thread(SeleccionarProducto);
@@ -237,6 +238,8 @@ namespace vista
                 hiloPrincipal.Abort();
 
             }
+            
+           
 
 
 
@@ -255,8 +258,21 @@ namespace vista
 
                     if (Form.Equals(this.frmSeleccionar, null))
                     {
+                        if(this.frmSeleccionarAccesorio != null)
+                        {
 
-                        this.aux.ImportRow(this.frmSeleccionarAccesorio.dt.Rows[0]);
+                       this.aux.ImportRow(this.frmSeleccionarAccesorio.dt.Rows[0]);
+
+                        }else
+                        {
+
+                          
+                            MessageBox.Show("No se a cargado ningun producto todavia");
+                        }
+                        
+
+                        
+
                     }
                     else
                     {

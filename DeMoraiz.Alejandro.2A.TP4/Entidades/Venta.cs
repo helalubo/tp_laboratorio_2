@@ -174,7 +174,7 @@ namespace Entidades
             archivoTicket.Guardar("Tickets.txt" , sb.ToString());
 
         }
-        /// C:\Users\User\Desktop\UTN\tp_laboratorio_2\DeMoraiz.Alejandro.2A.TP4\vista\bin\Debug
+       
 
         public static void GuardarVentasEnXml(List<Producto> listaDeProductos)
         {
