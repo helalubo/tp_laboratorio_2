@@ -1,4 +1,6 @@
-﻿namespace Entidades
+﻿using System.Text;
+
+namespace Entidades
 {
     public  class Producto
     {
@@ -100,10 +102,23 @@
             }
         }
 
-        #endregion 
+        #endregion
+
+
+        #region sobrecarga de Metodos
+
+        public override string ToString()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine($"ID: {this.id} Nombre: {this.nombre} precio: {this.precio} stock {this.cantidad}");
 
 
 
+            return sb.ToString();   
+        }
+
+
+        #endregion
 
 
     }

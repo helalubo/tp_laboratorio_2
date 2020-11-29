@@ -113,7 +113,7 @@ namespace vista
             // 
             this.btnActualizar.Location = new System.Drawing.Point(959, 145);
             this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(217, 62);
+            this.btnActualizar.Size = new System.Drawing.Size(217, 147);
             this.btnActualizar.TabIndex = 12;
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.UseVisualStyleBackColor = true;
@@ -121,7 +121,7 @@ namespace vista
             // 
             // textPago
             // 
-            this.textPago.Location = new System.Drawing.Point(959, 222);
+            this.textPago.Location = new System.Drawing.Point(959, 316);
             this.textPago.Name = "textPago";
             this.textPago.Size = new System.Drawing.Size(217, 26);
             this.textPago.TabIndex = 15;
@@ -142,7 +142,7 @@ namespace vista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1203, 517);
+            this.ClientSize = new System.Drawing.Size(1203, 602);
             this.Controls.Add(this.textPago);
             this.Controls.Add(this.lblImporte);
             this.Controls.Add(this.btnActualizar);

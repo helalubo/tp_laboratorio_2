@@ -316,7 +316,7 @@ namespace vista
                 miDelegadoDeVenta = new DelegadoDeVenta(Venta.VerificarStock);
                 miDelegadoDeVenta += Venta.modificarStock;
 
-                Venta.EventoTicket += TXTTicket;
+         
                 miDelegadoDeVenta += Venta.GuardarVentasEnXml;
 
        

@@ -23,7 +23,7 @@ namespace Archivos
             }
             catch (Exception e)
             {
-             
+                Console.Write(e.Message);
             }
 
             return rta;

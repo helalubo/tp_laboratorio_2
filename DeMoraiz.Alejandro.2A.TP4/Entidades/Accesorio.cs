@@ -37,7 +37,7 @@ namespace Entidades
             media,
             mediaAlta,
             alta,
-            otro,
+            otro
 
 
         }
@@ -48,7 +48,7 @@ namespace Entidades
             AccesorioBateria,
             AccesorioTeclado,
             AccesorioBajo,
-            Accesoriootro,
+            Accesoriootro
 
 
         }

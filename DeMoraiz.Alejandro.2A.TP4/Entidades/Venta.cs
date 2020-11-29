@@ -16,7 +16,12 @@ namespace Entidades
 
         public static  event DelegadoDeVenta EventoTicket;
 
-       
+        
+
+        public Venta()
+        {
+
+        }
 
         public static void VerificarStock(List<Producto> listaDeProductos)
         {
@@ -122,6 +127,7 @@ namespace Entidades
             finally
             {
                 conexion.Conexion.Close();
+                Venta.EventoTicket += TXTTicket;
                 EventoTicket(listaDeProductos);
             }
 
@@ -179,6 +185,9 @@ namespace Entidades
         public static void GuardarVentasEnXml(List<Producto> listaDeProductos)
         {
 
+            
+            
+            
             String nombreArchivoXml = "ArticulosVendidos.xml";
             nombreArchivoXml = nombreArchivoXml.AgregarFecha();
 
