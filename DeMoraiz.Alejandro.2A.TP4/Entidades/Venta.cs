@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
+
 namespace Entidades
 {
     public class Venta
@@ -149,7 +150,7 @@ namespace Entidades
             sb.AppendLine("Fue atendido:                                    ");
             sb.AppendLine("                                                 ");
             sb.AppendLine("-------------------------------------------------");
-            sb.AppendLine("Articulo               Cant        P.Unit        ");
+            sb.AppendLine("Articulo                      Cant        P.Unit ");
             sb.AppendLine("-------------------------------------------------");
 
             if (listaDeProductos != null)
@@ -159,7 +160,8 @@ namespace Entidades
 
                 foreach (Producto aux in listaDeProductos)
                 {
-            sb.AppendLine($"{aux.Nombre}       1        ${aux.Precio}        "); 
+            sb.AppendLine($"{aux.Nombre}              1        ${aux.Precio}");
+                    precioTotal += aux.Precio;
                 }
 
             }
@@ -167,19 +169,38 @@ namespace Entidades
             sb.AppendLine($"Total                             ${precioTotal}");
 
             Texto archivoTicket = new Texto(); 
-            string nombreArchivo = DateTime.Now.ToString();
+           
 
             archivoTicket.Guardar("Tickets.txt" , sb.ToString());
 
         }
         /// C:\Users\User\Desktop\UTN\tp_laboratorio_2\DeMoraiz.Alejandro.2A.TP4\vista\bin\Debug
 
-
-        public void XMLVentasRealizadas(List<Producto> listaDeProductos)
+        public static void GuardarVentasEnXml(List<Producto> listaDeProductos)
         {
+
+            String nombreArchivoXml = "ArchivoVenta.xml";
+            nombreArchivoXml = nombreArchivoXml.AgregarFecha();
+
+
+
+            Xml<List<Producto>> ArchivoVenta = new Xml<List<Producto>>();
+            ArchivoVenta.Guardar(nombreArchivoXml, listaDeProductos);
+
+
+         
+
+
+
+
+
+
+
 
 
         }
+
+
 
     }
 }

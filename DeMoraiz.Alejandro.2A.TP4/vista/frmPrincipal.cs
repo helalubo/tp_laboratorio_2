@@ -301,6 +301,7 @@ namespace vista
                 miDelegadoDeVenta += Venta.modificarStock;
 
                 Venta.EventoTicket += TXTTicket;
+                miDelegadoDeVenta += Venta.GuardarVentasEnXml;
 
        
 

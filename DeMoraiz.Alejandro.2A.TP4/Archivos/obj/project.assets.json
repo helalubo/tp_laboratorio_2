@@ -25,6 +25,25 @@
         "build": {
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
+      },
+      "CapaDatos/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/CapaDatos.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CapaDatos.dll": {}
+        }
+      },
+      "Excepciones/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/Excepciones.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Excepciones.dll": {}
+        }
       }
     }
   },
@@ -172,10 +191,22 @@
         "netstandard.library.2.0.3.nupkg.sha512",
         "netstandard.library.nuspec"
       ]
+    },
+    "CapaDatos/1.0.0": {
+      "type": "project",
+      "path": "../CapaDatos/CapaDatos.csproj",
+      "msbuildProject": "../CapaDatos/CapaDatos.csproj"
+    },
+    "Excepciones/1.0.0": {
+      "type": "project",
+      "path": "../Excepciones/Excepciones.csproj",
+      "msbuildProject": "../Excepciones/Excepciones.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
+      "CapaDatos >= 1.0.0",
+      "Excepciones >= 1.0.0",
       "NETStandard.Library >= 2.0.3"
     ]
   },
@@ -205,7 +236,14 @@
       "frameworks": {
         "netstandard2.0": {
           "targetAlias": "netstandard2.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\User\\Desktop\\UTN\\tp_laboratorio_2\\DeMoraiz.Alejandro.2A.TP4\\CapaDatos\\CapaDatos.csproj": {
+              "projectPath": "C:\\Users\\User\\Desktop\\UTN\\tp_laboratorio_2\\DeMoraiz.Alejandro.2A.TP4\\CapaDatos\\CapaDatos.csproj"
+            },
+            "C:\\Users\\User\\Desktop\\UTN\\tp_laboratorio_2\\DeMoraiz.Alejandro.2A.TP4\\Excepciones\\Excepciones.csproj": {
+              "projectPath": "C:\\Users\\User\\Desktop\\UTN\\tp_laboratorio_2\\DeMoraiz.Alejandro.2A.TP4\\Excepciones\\Excepciones.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
