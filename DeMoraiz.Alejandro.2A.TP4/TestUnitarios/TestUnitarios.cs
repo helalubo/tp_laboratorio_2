@@ -1,8 +1,9 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
-using Entidades;
+﻿using Entidades;
 using Excepciones;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 using System.Collections.Generic;
+using System.Text;
 using static Entidades.Accesorio;
 
 namespace TestUnitarios
@@ -11,7 +12,7 @@ namespace TestUnitarios
     public class TestUnitarios
     {
         [TestMethod]
-       
+
         public void VerificarSiSobrepasaStock()
         {
             //Creo lista de Producto 
@@ -37,16 +38,47 @@ namespace TestUnitarios
 
             try
             {
-            Venta.VerificarStock(pruebaDeProductos);
+                Venta.VerificarStock(pruebaDeProductos);
 
             }
-            catch (SobrepasaStockException e )
+            catch (SobrepasaStockException e)
             {
 
                 Assert.IsInstanceOfType(e, typeof(SobrepasaStockException));
-           
+
             }
 
         }
+
+
+        [TestMethod]
+
+        public void VerificarFormatoDeTituloDeArchivo()
+        {
+            bool rta = false;
+
+            StringBuilder sb = new StringBuilder();
+            string corroboracion = "NombreArchivo";
+
+            sb.Append($"{DateTime.Now.Day}{DateTime.Now.Month}{DateTime.Now.Year}{DateTime.Now.Hour}{DateTime.Now.Minute}{corroboracion}");
+
+            corroboracion= corroboracion.AgregarFecha();
+
+            rta = String.Equals(corroboracion, sb.ToString()) ;
+
+            Assert.IsTrue(rta);
+
+
+
+
+
+
+
+
+        }
+
+
+
+
     }
 }
