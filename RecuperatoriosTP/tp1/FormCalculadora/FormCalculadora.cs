@@ -12,8 +12,16 @@ using Entidades;
 
 namespace FormCalculadora
 {
+
+    /// <summary>
+    /// Clase FormCalculadora 
+    /// </summary>
     public partial class FormCalculadora : Form
     {
+
+        /// <summary>
+        /// Constructor sin parametros de clase FormCaculadora
+        /// </summary>
         public FormCalculadora()
         {
             InitializeComponent();
@@ -21,10 +29,24 @@ namespace FormCalculadora
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
         }
 
+        /// <summary>
+        ///Boton que ejecuta la funcion que Limpia los resultados y numeros ingresados
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
             Limpiar();
         }
+
+
+        /// <summary>
+        /// Limpia los resultados y numeros ingresados
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+
         private void Limpiar()
         {
 
@@ -34,6 +56,14 @@ namespace FormCalculadora
             this.txtNumero2.Clear();
         }
 
+
+        /// <summary>
+        ///  Opera 2 numeros segun el tipo de operador pasado por parametro
+        /// </summary>
+        /// <param name="numero1">Numero a ser operado </param>
+        /// <param name="numero2">Numero para operacion</param>
+        /// <param name="operador">Signo operador</param>
+        /// <returns>Resultado de la operacion</returns>
 
         private static double Operar(string numero1, string numero2,string operador)
         {
@@ -54,7 +84,11 @@ namespace FormCalculadora
 
 
 
-
+        /// <summary>
+        /// Boton que ejecuta la operacion
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
 
 
         private void btnOperar_Click(object sender, EventArgs e)
@@ -71,7 +105,11 @@ namespace FormCalculadora
 
 
 
-
+        /// <summary>
+        /// Al cerrar el formulario verifica si se desea salir o no del formulario
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
 
         private void formCalculadora_Closing(object sender, FormClosingEventArgs e)
         {
@@ -84,38 +122,14 @@ namespace FormCalculadora
 
 
 
+        /// <summary>
+        /// Boton que convierte el resultado decimal a binario
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
 
 
 
-        private void textBox1_TextChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void FormCalculadora_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void toolTip1_Popup(object sender, PopupEventArgs e)
-        {
-
-        }
-
-        private void btnCerrar_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
 
         private void btnConvertirABinario_Click(object sender, EventArgs e)
         {
@@ -128,6 +142,13 @@ namespace FormCalculadora
 
             }
         }
+
+
+        /// <summary>
+        /// Boton que convierte el binario a decimal
+         /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
 
         private void btnConvertirADecimal_Click(object sender, EventArgs e)
         {

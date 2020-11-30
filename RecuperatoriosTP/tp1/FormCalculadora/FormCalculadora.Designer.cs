@@ -42,6 +42,7 @@
             // 
             // txtNumero1
             // 
+            this.txtNumero1.BackColor = System.Drawing.Color.Lime;
             this.txtNumero1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNumero1.Location = new System.Drawing.Point(90, 149);
             this.txtNumero1.Multiline = true;
@@ -49,7 +50,6 @@
             this.txtNumero1.Size = new System.Drawing.Size(284, 66);
             this.txtNumero1.TabIndex = 0;
             this.txtNumero1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtNumero1.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
             // 
             // btnConvertirABinario
             // 
@@ -89,11 +89,11 @@
             this.btnCerrar.TabIndex = 5;
             this.btnCerrar.Text = "Cerrar";
             this.btnCerrar.UseVisualStyleBackColor = true;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // cmbOperador
             // 
             this.cmbOperador.AllowDrop = true;
+            this.cmbOperador.BackColor = System.Drawing.Color.Lime;
             this.cmbOperador.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbOperador.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cmbOperador.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -108,7 +108,6 @@
             this.cmbOperador.Size = new System.Drawing.Size(121, 66);
             this.cmbOperador.TabIndex = 1;
             this.cmbOperador.UseWaitCursor = true;
-            this.cmbOperador.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -121,6 +120,7 @@
             // 
             // txtNumero2
             // 
+            this.txtNumero2.BackColor = System.Drawing.Color.Lime;
             this.txtNumero2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNumero2.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNumero2.Location = new System.Drawing.Point(546, 149);
@@ -129,7 +129,6 @@
             this.txtNumero2.Size = new System.Drawing.Size(284, 66);
             this.txtNumero2.TabIndex = 2;
             this.txtNumero2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtNumero2.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
             // 
             // lblResultado
             // 
@@ -155,6 +154,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(925, 452);
             this.Controls.Add(this.lblResultado);
             this.Controls.Add(this.label1);
@@ -171,7 +171,6 @@
             this.Name = "FormCalculadora";
             this.Text = "Calculadora de Alejandro De Moraiz del curso 2ºB";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.formCalculadora_Closing);
-            this.Load += new System.EventHandler(this.FormCalculadora_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

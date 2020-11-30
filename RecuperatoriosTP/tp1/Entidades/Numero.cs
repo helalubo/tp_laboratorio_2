@@ -2,27 +2,47 @@
 
 namespace Entidades
 {
+
+
+    /// <summary>
+    /// Clase de numero
+    /// </summary>
     public class Numero
     {
         private double numero;
 
+
+        /// <summary>
+        /// Constructor por defecto de la clase.
+        /// </summary>
         public Numero()
         {
             this.numero = 0;
 
         }
-
+        /// <summary>
+        /// Constructor con parametro numero de tipo entero
+        /// </summary>
+        /// <param name="numero"></param>
         public Numero(double numero)
         {
             this.numero = numero;
 
         }
-
+        /// <summary>
+        /// Constructor con parametro numero de tipo string
+        /// </summary>
+        /// <param name="strNumero"></param>
         public Numero(string strNumero)
         {
             SetNumero = strNumero;
 
         }
+
+
+        /// <summary>
+        /// Atributo que valida el numero
+        /// </summary>
 
         public string SetNumero
         {
@@ -47,40 +67,62 @@ namespace Entidades
 
             }
         }
+        /// <summary>
+        /// Resta n1 con n2
+        /// </summary>
+        /// <param name="n1">Numero para operar</param>
+        /// <param name="n2">segundo numero para operar</param>
+        /// <returns>resultado de la operacion</returns>
 
-
-        public static double operator - (Numero n1, Numero n2)
+        public static double operator -(Numero n1, Numero n2)
         {
             return n1.numero - n2.numero;
 
 
         }
-
+        /// <summary>
+        /// Suma n1 con n2
+        /// </summary>
+        /// <param name="n1">Numero para operar</param>
+        /// <param name="n2">segundo numero para operar</param>
+        /// <returns>resultado de la operacion</returns>
         public static double operator +(Numero n1, Numero n2)
         {
-            return n1.numero +  n2.numero;
+            return n1.numero + n2.numero;
 
 
         }
+
+        /// <summary>
+        /// Multiplica n1 con n2
+        /// </summary>
+        /// <param name="n1">Numero para operar</param>
+        /// <param name="n2">segundo numero para operar</param>
+        /// <returns>resultado de la operacion</returns>
         public static double operator *(Numero n1, Numero n2)
         {
             return n1.numero * n2.numero;
 
 
         }
-
+        /// <summary>
+        /// divide n1 con n2
+        /// </summary>
+        /// <param name="n1">Numero para operar</param>
+        /// <param name="n2">segundo numero para operar</param>
+        /// <returns>resultado de la operacion</returns>
         public static double operator /(Numero n1, Numero n2)
         {
             double rta;
 
-            if(n2.numero == 0 )
+            if (n2.numero == 0)
             {
                 rta = double.MinValue;
             }
             else
             {
 
-                rta =  n1.numero / n2.numero;
+                rta = n1.numero / n2.numero;
 
 
             }
@@ -94,7 +136,11 @@ namespace Entidades
 
 
 
-
+        /// <summary>
+        /// Valida el numero ingresado como string
+        /// </summary>
+        /// <param name="strNumero"></param>
+        /// <returns></returns>
 
 
         private static double ValidarNumero(string strNumero)
@@ -102,13 +148,19 @@ namespace Entidades
 
             double aux;
 
-            if(!double.TryParse(strNumero, out aux))
+            if (!double.TryParse(strNumero, out aux))
             {
                 aux = 0;
             }
             return aux;
 
         }
+
+        /// <summary>
+        /// Verifica si es binario
+        /// </summary>
+        /// <param name="binario"></param>
+        /// <returns>true en caso de ser valido, false en caso de que no</returns>
 
         private bool EsBinario(string binario)
         {
@@ -133,7 +185,11 @@ namespace Entidades
 
 
         }
-
+        /// <summary>
+        /// Pasa el numero de Binario a decimal
+        /// </summary>
+        /// <param name="binario">Cadena de caracteres que sera pasada a binario</param>
+        /// <returns>Cadena de caracteres en decimal</returns>
 
         public string BinarioDecimal(string binario)
         {
@@ -178,13 +234,17 @@ namespace Entidades
 
         }
 
-
+        /// <summary>
+        /// Pasa el numero de decimal a binario
+        /// </summary>
+        /// <param name="numero">numero a pasar a binario</param>
+        /// <returns>cadena de caracteres de numero que fue transformado en binario</returns>
         public string DecimalBinario(double numero)
         {
             string bin = "";
-           
 
-            
+
+
 
             if (numero >= 1 && ValidarNumero(Convert.ToString(numero)) != 0)
             {
@@ -220,13 +280,19 @@ namespace Entidades
             }
 
             return bin;
-            
+
 
 
 
 
 
         }
+
+        /// <summary>
+        /// Pasa de decimal a binario
+        /// </summary>
+        /// <param name="numero">Numero en formato cadena de caracteres a ser transformado a Binario</param>
+        /// <returns></returns>
         public string decimalBinario(string numero)
         {
             string bin = "";

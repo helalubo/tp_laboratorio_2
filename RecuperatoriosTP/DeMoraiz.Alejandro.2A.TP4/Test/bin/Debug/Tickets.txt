@@ -1,0 +1,57 @@
+                  Empresa xxxxx                  
+            ****************************         
+                                                 
+                Factura de Venta                 
+No Fac:                                          
+Fecha: 29/11/2020 16:41:49                           
+Fue atendido:                                    
+                                                 
+-------------------------------------------------
+Articulo                      Cant        P.Unit 
+-------------------------------------------------
+Bateria Sonor              1        $100000
+Bajo Gibson              1        $50000
+Correa Guitarra classic               1        $550
+banquillo Yamaha               1        $8500
+banquillo Yamaha               1        $8500
+-------------------------------------------------
+Total                             $167550
+
+                  Empresa xxxxx                  
+            ****************************         
+                                                 
+                Factura de Venta                 
+No Fac:                                          
+Fecha: 29/11/2020 16:41:49                           
+Fue atendido:                                    
+                                                 
+-------------------------------------------------
+Articulo                      Cant        P.Unit 
+-------------------------------------------------
+Bateria Sonor              1        $100000
+Bajo Gibson              1        $50000
+Correa Guitarra classic               1        $550
+banquillo Yamaha               1        $8500
+banquillo Yamaha               1        $8500
+-------------------------------------------------
+Total                             $167550
+
+                  Empresa xxxxx                  
+            ****************************         
+                                                 
+                Factura de Venta                 
+No Fac:                                          
+Fecha: 29/11/2020 16:43:38                           
+Fue atendido:                                    
+                                                 
+-------------------------------------------------
+Articulo                      Cant        P.Unit 
+-------------------------------------------------
+Bateria Sonor              1        $100000
+Bajo Gibson              1        $50000
+Correa Guitarra classic               1        $550
+banquillo Yamaha               1        $8500
+banquillo Yamaha               1        $8500
+-------------------------------------------------
+Total                             $167550
+
