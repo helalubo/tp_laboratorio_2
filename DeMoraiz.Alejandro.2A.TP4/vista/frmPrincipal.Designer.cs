@@ -152,8 +152,7 @@ namespace vista
             this.Controls.Add(this.btnCargarInstrumento);
             this.Controls.Add(this.panel1);
             this.Name = "frmPrincipal";
-            this.Text = "Form1";
-        
+            this.Text = "Venta de Articulos Musicales";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrincipal)).EndInit();
