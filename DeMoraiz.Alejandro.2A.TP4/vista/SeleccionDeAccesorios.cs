@@ -12,19 +12,16 @@ using System.Windows.Forms;
 
 namespace vista
 {
+
+    /// <summary>
+    /// Clase de tipo Form para seleccion de Accesorios musicales
+    /// </summary>
     public partial class SeleccionDeAccesorios : Form
     {
         #region Campos
 
         public SqlDataAdapter da;
         public DataTable dt;
-
-
-
-
-
-
-
 
 
         #endregion
@@ -36,6 +33,12 @@ namespace vista
 
         #region Constructor 
 
+
+
+        /// <summary>
+        /// Constructor por defecto que inicializa al componente y lo setea 
+        /// para que aparezca en el medio de la pantalla
+        /// </summary>
         public SeleccionDeAccesorios()
         {
             InitializeComponent();
@@ -66,6 +69,12 @@ namespace vista
 
         #region DataAdapter
 
+
+        /// <summary>
+        /// Configuro DataAdapter para la busqueda de los Accesorios mediante un textbox 
+        /// con conexion a base de datos
+        /// </summary>
+        /// <returns></returns>
         private bool ConfigurarDataAdapter()
         {
             bool rta = false;
@@ -101,6 +110,11 @@ namespace vista
 
         #region Datatable
 
+
+
+        /// <summary>
+        /// Configuracion de DataTable para compatibilidad con Accesorios
+        /// </summary>
         private void ConfigurarDataTable()
         {
             this.dt = new DataTable("Accesorios");
@@ -126,10 +140,13 @@ namespace vista
 
         #region DataGridView
 
+        /// <summary>
+        /// Configuracion de formato de DataGridView
+        /// </summary>
         private void ConfigurarGrilla()
         {
             // Coloco color de fondo para las filas
-            this.dgvGrilla.RowsDefaultCellStyle.BackColor = Color.Wheat;
+            this.dgvGrilla.RowsDefaultCellStyle.BackColor = Color.LightGreen;
 
             // Alterno colores
             this.dgvGrilla.AlternatingRowsDefaultCellStyle.BackColor = Color.BurlyWood;
@@ -173,6 +190,13 @@ namespace vista
 
         #endregion
 
+        /// <summary>
+        /// LLama a los metodos que configurar DataAbapter, el dataTable y el DataGridView
+        /// lleno el datatable con el dataAbapter y llena la grilla con el dataTable.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             this.ConfigurarDataAdapter();
@@ -186,7 +210,7 @@ namespace vista
                 this.ConfigurarGrilla();
 
 
-                //lleno la grilla con el fill que esta establecido por el comando select * 
+                
                 this.da.Fill(this.dt);
 
 
@@ -207,6 +231,13 @@ namespace vista
 
 
         }
+
+
+        /// <summary>
+        ///Selecciono un accesorio de DataGridView y traigo sus campos mediante el id, 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
 
         private void btnSeleccionProductos_Click(object sender, EventArgs e)
         {
@@ -236,16 +267,6 @@ namespace vista
                 this.da.SelectCommand = new SqlCommand("select id , nombre,precio ,cantidad  from Accesorios where id = " + id + ";", accesoADatos.Conexion);
 
 
-
-
-
-
-
-
-
-
-
-
                 this.da.Fill(this.dt);
 
 
@@ -260,27 +281,8 @@ namespace vista
             }
 
 
-
-
-
-
-
-
-
-
-
-        }
-
-        private void dgvGrilla_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
 
        
-
-        private void dgvGrilla_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
     }
 }

@@ -12,6 +12,10 @@ using static Entidades.Venta;
 
 namespace vista
 {
+
+    /// <summary>
+    /// Clase de formulario principal que hereda de Form
+    /// </summary>
     public partial class frmPrincipal : Form
     {
 
@@ -61,9 +65,12 @@ namespace vista
             }
         }
 
-       
 
 
+        /// <summary>
+        /// Atributo de lectura de lista de productos seleccionado con respecto a la seleccion
+        /// en el datagridview principal, esta es retornada en forma de Lista .
+        /// </summary>
 
         public List<Producto> ProductosSeleccionados
         {
@@ -106,22 +113,18 @@ namespace vista
 
         }
 
-
+        /// <summary>
+        /// Constructor vacio de clase frmPrincipal,
+        /// en la cual se inicializa el hilo principal pasandole 
+        /// la direccion de memoria de la funcion Seleccionar producto,
+        /// inicializo el datagridView principal y le doy el formato de 
+        /// un dataTable de producto
+        /// </summary>
         public frmPrincipal()
         {
 
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
-
-
-
-
-
-
-
-
-
-
             hiloPrincipal = new Thread(SeleccionarProducto);
             ConfigurarGrilla();
             configuracionDataTable();
@@ -134,6 +137,12 @@ namespace vista
 
         }
 
+
+        /// <summary>
+        /// Abre el formulario para cargar un instrumento
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnCargarInstrumento_Click(object sender, EventArgs e)
         {
             this.frmSeleccionar = new SeleccionDeInstrumentos();
@@ -141,12 +150,22 @@ namespace vista
 
         }
 
+        /// <summary>
+        /// Abre el formulario para cargar un Accesorio
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnCargarAccesorio_Click(object sender, EventArgs e)
         {
             this.frmSeleccionarAccesorio = new SeleccionDeAccesorios();
             this.frmSeleccionarAccesorio.Show();
         }
 
+
+
+        /// <summary>
+        /// Configuro el DataTable para que muestre los articulos en formato producto
+        /// </summary>
         public void configuracionDataTable()
         {
             this.dt = new DataTable("Producto");
@@ -155,12 +174,10 @@ namespace vista
             this.dt.Columns.Add("nombre", typeof(string));
             this.dt.Columns.Add("precio", typeof(float));
             this.dt.Columns.Add("cantidad", typeof(int));
-            //       producto.Cantidad = (int)(fila["cantidad"]);
 
-            ///  this.dt.PrimaryKey = new DataColumn[] { this.dt.Columns[0] };
 
             this.dt.Columns["id"].AutoIncrement = true;
-            this.dt.Columns["id"].AutoIncrementSeed = 1;//obtener el último id insertado en la tabla
+            this.dt.Columns["id"].AutoIncrementSeed = 1;
             this.dt.Columns["id"].AutoIncrementStep = 1;
 
 
@@ -168,10 +185,9 @@ namespace vista
         }
 
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+        /// <summary>
+        /// Configura dandole formato a la grilla
+        /// </summary>
 
         private void ConfigurarGrilla()
         {
@@ -189,7 +205,7 @@ namespace vista
             this.dgvPrincipal.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
             // Defino el color de las lineas de separación
-            this.dgvPrincipal.GridColor = Color.HotPink;
+            this.dgvPrincipal.GridColor = Color.Aqua;
 
             // La grilla será de sólo lectura
             this.dgvPrincipal.ReadOnly = false;
@@ -204,8 +220,8 @@ namespace vista
             this.dgvPrincipal.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
             // Indico el color de la fila seleccionada
-            this.dgvPrincipal.RowsDefaultCellStyle.SelectionBackColor = Color.DarkOliveGreen;
-            this.dgvPrincipal.RowsDefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            this.dgvPrincipal.RowsDefaultCellStyle.SelectionBackColor = Color.Black;
+            this.dgvPrincipal.RowsDefaultCellStyle.SelectionForeColor = Color.White;
 
             // No permito modificar desde la grilla
             this.dgvPrincipal.EditMode = DataGridViewEditMode.EditProgrammatically;
@@ -218,14 +234,15 @@ namespace vista
 
         }
 
+        /// <summary>
+        /// Actualiza El formulario principal dando inicio al hilo correspondiente de este.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+
         private void btnActualizar_Click(object sender, EventArgs e)
         {
-            /// Aca inicializar hilo
-            /// 
-
-
             
-
 
             hiloPrincipal = new Thread(SeleccionarProducto);
             if (!hiloPrincipal.IsAlive)
@@ -238,14 +255,18 @@ namespace vista
                 hiloPrincipal.Abort();
 
             }
-            
-           
+
+
 
 
 
         }
 
-
+        /// <summary>
+        /// Observa los DataTable de los formularios de Accesorios y de instrumentos
+        /// que estan en otros hilos y carga el dataGridView de l form principal
+        /// con los articulos seleccionados en estos formularios  
+        /// </summary>
         private void SeleccionarProducto()
         {
 
@@ -258,20 +279,21 @@ namespace vista
 
                     if (Form.Equals(this.frmSeleccionar, null))
                     {
-                        if(this.frmSeleccionarAccesorio != null)
+                        if (this.frmSeleccionarAccesorio != null)
                         {
 
-                       this.aux.ImportRow(this.frmSeleccionarAccesorio.dt.Rows[0]);
+                            this.aux.ImportRow(this.frmSeleccionarAccesorio.dt.Rows[0]);
 
-                        }else
+                        }
+                        else
                         {
 
-                          
+
                             MessageBox.Show("No se a cargado ningun producto todavia");
                         }
-                        
 
-                        
+
+
 
                     }
                     else
@@ -291,12 +313,25 @@ namespace vista
             {
 
                 this.dgvPrincipal.DataSource = aux;
+                this.lblImporte.Text = ImporteDeVenta;
                 this.aux = (DataTable)this.dgvPrincipal.DataSource;
 
 
             }
         }
 
+
+        /// <summary>
+        /// Gestiona lo necesario para la venta de lo productos seleccionado
+        /// esto utilizando un delegado el cual maneja las funciones para
+        /// Verificar stock(en caso de que el stock sea menor
+        /// a los articulos requeridos lanza una excepcion),modificar el stock
+        /// (el cual lanza el evento que genera el ticket) y
+        /// genera un archivo .xml con las ventas realizadas.
+        /// Dichas funciones se ejecutan invocando al delegado.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
 
 
         private void btnVender_Click(object sender, EventArgs e)
@@ -315,25 +350,23 @@ namespace vista
                 //inicializo al delegado
                 miDelegadoDeVenta = new DelegadoDeVenta(Venta.VerificarStock);
                 miDelegadoDeVenta += Venta.modificarStock;
-
-         
                 miDelegadoDeVenta += Venta.GuardarVentasEnXml;
 
-       
 
-               
+
+
                 try
                 {
                     miDelegadoDeVenta.Invoke(productos);
-                    
-                    
+
+
 
                 }
-                catch (SobrepasaStockException  e1)
+                catch (SobrepasaStockException e1)
                 {
                     MessageBox.Show(e1.Message);
                 }
-                catch(Exception e2)
+                catch (Exception e2)
                 {
                     MessageBox.Show(e2.Message);
                 }
@@ -360,23 +393,12 @@ namespace vista
 
 
                 MessageBox.Show(fallo);
-                ///poner delegado con eventos
+               
             }
 
 
-
-
-
-
-            //this.miDelegadoDeVenta = new DelegadoDeVenta(modificarStock);
-
-
-
         }
 
-        private void frmPrincipal_Load(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }

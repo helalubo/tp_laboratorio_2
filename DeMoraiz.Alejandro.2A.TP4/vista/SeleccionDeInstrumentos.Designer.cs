@@ -49,7 +49,7 @@ namespace vista
             this.dgvGrilla.RowHeadersWidth = 62;
             this.dgvGrilla.Size = new System.Drawing.Size(890, 388);
             this.dgvGrilla.TabIndex = 10;
-            this.dgvGrilla.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGrilla_CellContentClick);
+           
             // 
             // label1
             // 

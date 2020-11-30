@@ -6,8 +6,23 @@ using System.Xml.Serialization;
 
 namespace Archivos
 {
+
+    /// <summary>
+    /// Clase encargada de crear archivos .xml de un tipo de dato generico
+    /// implementa interface IArchivo
+    /// </summary>
+    /// <typeparam name="T">Dato generico</typeparam>
+
     public class Xml<T> : IArchivo<T>
     {
+
+        /// <summary>
+        /// Metodo para guardar un tipo de dato generico em formato .xml
+        /// </summary>
+        /// <param name="archivo"></param>
+        /// <param name="datos"></param>
+        /// <returns></returns>
+
         public bool Guardar(string archivo, T datos)
         {
 

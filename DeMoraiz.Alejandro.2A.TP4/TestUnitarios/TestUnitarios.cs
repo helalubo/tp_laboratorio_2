@@ -8,11 +8,18 @@ using static Entidades.Accesorio;
 
 namespace TestUnitarios
 {
+
+    /// <summary>
+    /// Clase de test unitarios 
+    /// </summary>
     [TestClass]
     public class TestUnitarios
     {
-        [TestMethod]
+        /// <summary>
+        /// Verifica si se sobrepasa el stock con respecto a su cantidad
+        /// </summary>
 
+        [TestMethod]
         public void VerificarSiSobrepasaStock()
         {
             //Creo lista de Producto 
@@ -50,6 +57,13 @@ namespace TestUnitarios
 
         }
 
+
+
+
+        /// <summary>
+        /// Verifica si el formato del titulo del archivo sea el requerido
+        /// con respecto al formato de la fecha
+        /// </summary>
 
         [TestMethod]
 

@@ -8,30 +8,51 @@ using System.Text;
 
 namespace Entidades
 {
+
+    /// <summary>
+    /// Clase publica de Venta
+    /// </summary>
+
     public class Venta
     {
 
+        /// <summary>
+        /// Delegado de venta
+        /// </summary>
+        /// <param name="listaDeProductos">Lista de productos a manejar</param>
         public delegate void DelegadoDeVenta(List<Producto> listaDeProductos);
 
+
+        /// <summary>
+        /// Evento de tipo DelegadoDeVenta
+        /// </summary>
 
         public static  event DelegadoDeVenta EventoTicket;
 
    
-
+        /// <summary>
+        /// Constructor vacio de venta
+        /// </summary>
         public Venta()
         {
 
         }
 
+
+        /// <summary>
+        /// Verifica el stock con respecto al atributo cantidad de cada uno de los productos
+        /// Si alguno de los productos se repite en la lista mas veces que la cantidad de dicho producto
+        /// entonces lanzara una excepcion de tipo  SobrepasaStockException 
+        /// </summary>
+        /// <param name="listaDeProductos">Lista de productos a manejar</param>
+
         public static void VerificarStock(List<Producto> listaDeProductos)
         {
-            ///verifica el stock antes de hacer la venta, en caso de que alguna de las cantidades sea menor
-            ///a las cantidades que hay de cada producto.
-            ///una vez validado esto recien se modificara el stock.
+            
 
             int cont;
 
-            //ya tengo el dato del stock de cada producto en la lista, tengo que hacer una verificacion con cantidad
+           
 
             for (int i = 0; i < listaDeProductos.Count; i++)
             {
@@ -65,23 +86,30 @@ namespace Entidades
             }
 
 
+
         }
+
+
+        /// <summary>
+        /// Modifica el stock segun la lista de productos que se le pase,
+        /// luego de modificar el stock dependiendo si el producto es un instrumento
+        /// o si es un Accesorio,
+        /// agrega la funcion TXTTicket al evento 
+        /// EventoTicket y lo lanza
+        /// </summary>
+        /// <param name="listaDeProductos">Lista de productos a manejar</param>
 
         public static  void modificarStock(List<Producto> listaDeProductos)
         {
 
 
-            ///crear objetos para entrar a base de datos asi puedo configurar la cantidad. 
-            /////verificar si el id es menor de 10000, si lo es entonces hacer query de instrumentos, sino hara query de Accesorios
-            /////agregar or id = {producto.id}
-            ///
+          
 
 
 
             StringBuilder sbAccesorios = new StringBuilder();
             StringBuilder sbInsrumentos = new StringBuilder();
-            //sbAccesorios.Append(" UPDATE [Producto].[dbo].[Accesorios]SET cantidad = cantidad - 1 WHERE  id = ");
-            //sbInsrumentos.Append(" UPDATE [Producto].[dbo].[Instrumento]SET cantidad = cantidad - 1 WHERE  id = ");
+            
 
             AccesoDatos conexion = new AccesoDatos();
 
@@ -89,11 +117,6 @@ namespace Entidades
             {
 
                 conexion.Conexion.Open();
-
-
-
-
-                /////
 
 
                 foreach (Producto producoAux in listaDeProductos)
@@ -118,9 +141,9 @@ namespace Entidades
                     sbAccesorios.Clear();
                 }
             }
-            catch (Exception ex)
+            catch (Exception )
             {
-                //Console.Write(ex.Message);
+                
                 string fallo = "No se pudo conectar la base de datos";
                 throw new Exception(fallo);
             }
@@ -139,6 +162,10 @@ namespace Entidades
 
         }
 
+        /// <summary>
+        /// Crea un ticket en formato .txt de  la compra de productos
+        /// </summary>
+        /// <param name="listaDeProductos">Lista de productos a manejar</param>
 
         public static void TXTTicket(List<Producto> listaDeProductos)
         {
@@ -180,8 +207,13 @@ namespace Entidades
             archivoTicket.Guardar("Tickets.txt" , sb.ToString());
 
         }
-       
 
+
+        /// <summary>
+        /// Guarda la venta en un archivo .xml poniendo en su
+        /// titulo la fecha y la hora en la que fue realizada la venta
+        /// </summary>
+        /// <param name="listaDeProductos">Lista de productos a manejar</param>
         public static void GuardarVentasEnXml(List<Producto> listaDeProductos)
         {
 

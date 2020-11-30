@@ -3,10 +3,19 @@ using System.Text;
 
 namespace Entidades
 {
+
+    /// <summary>
+    /// Clase estatica  ExtensionesDeVenta creada para depositar los metodos 
+    /// extensiones
+    /// </summary>
     public static class ExtensionesDeVenta
     {
 
-
+        /// <summary>
+        /// Agrega la fecha y hora en formato numerico a un string, esto utilizando un metodo extension
+        /// </summary>
+        /// <param name="dato">String a transformar</param>
+        /// <returns></returns>
 
         public static string AgregarFecha(this String dato)
         {
@@ -16,10 +25,7 @@ namespace Entidades
 
             sb.Append($"{DateTime.Now.Day}{DateTime.Now.Month}{DateTime.Now.Year}{DateTime.Now.Hour}{DateTime.Now.Minute}{dato}");
 
-            //string fechaAux = DateTime.Now.Day.ToString() + DateTime.Now.Month.ToString() +DateTime.Now.Hour.ToString();
-
-           // DateTime.Now.Date.ToString();
-           // return DateTime.Now.ToString() + dato;
+         
             return sb.ToString();
 
 

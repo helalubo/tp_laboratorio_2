@@ -2,6 +2,10 @@
 
 namespace Entidades
 {
+
+    /// <summary>
+    /// Clase Producto
+    /// </summary>
     public  class Producto
     {
 
@@ -17,12 +21,21 @@ namespace Entidades
 
         #region Constructores
 
+        /// <summary>
+        /// Constructor vacio de clase producto
+        /// </summary>
 
         public Producto()
         {
 
         }
 
+        /// <summary>
+        /// Constructor parmetrizado de la clase Producto
+        /// </summary>
+        /// <param name="nombre">Nombre de Producto</param>
+        /// <param name="precio">Precio de producto</param>
+        /// <param name="cantidad">Cantidad con respecto al stock del producto</param>
 
         public Producto( string nombre, float precio, int cantidad)
         {
@@ -33,6 +46,14 @@ namespace Entidades
 
         }
 
+
+        /// <summary>
+        ///  Constructor parmetrizado de la clase Producto con todos sus campos
+        /// </summary>
+        /// <param name="id">id de producto</param>
+        /// <param name="nombre">Nombre de Producto</param>
+        /// <param name="precio">Precio de producto</param>
+        /// <param name="cantidad">Cantidad con respecto al stock del producto</param>
 
         public Producto(int id, string nombre,float precio, int cantidad):this(nombre,precio, cantidad)
         {
@@ -46,6 +67,10 @@ namespace Entidades
 
         #region Propiedades 
 
+
+        /// <summary>
+        /// Propiedad de lectura y escritura del campo id
+        /// </summary>
         public int ID
         {
             get
@@ -57,6 +82,10 @@ namespace Entidades
                 this.id = value;
             }
         }
+
+        /// <summary>
+        /// Propiedad de lectura y escritura del campo nombre
+        /// </summary>
 
         public string Nombre
         {
@@ -71,7 +100,9 @@ namespace Entidades
                 this.nombre = value;
             }
         }
-
+        /// <summary>
+        /// Propiedad de lectura y escritura del campo precio
+        /// </summary>
 
         public float Precio
         {
@@ -87,7 +118,9 @@ namespace Entidades
             }
         }
 
-
+        /// <summary>
+        /// Propiedad de lectura y escritura del campo Cantidad
+        /// </summary>
         public int Cantidad
         {
 
@@ -107,6 +140,11 @@ namespace Entidades
 
         #region sobrecarga de Metodos
 
+
+        /// <summary>
+        /// Sobrecarga de metodo ToString de Producto
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();

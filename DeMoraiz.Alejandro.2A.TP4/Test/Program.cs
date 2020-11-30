@@ -6,6 +6,10 @@ using static Entidades.Accesorio;
 
 namespace Test
 {
+
+    /// <summary>
+    /// Prueba en consola probando funcionalidades principales
+    /// </summary>
     public class Program
     {
         public static void Main(string[] args)
@@ -31,7 +35,7 @@ namespace Test
             productos.Add(a3);
 
 
-            ///muestro lista de productos
+           
 
             foreach (Producto producto in productos)
             {
@@ -39,7 +43,7 @@ namespace Test
             }
 
 
-            ///muestro que el stock sea mayor a la venta
+           
             try
             {
 

@@ -29,7 +29,7 @@ namespace Archivos
                     rta = true;
                 }
             }
-            catch (Exception e)
+            catch (Exception )
             {
                
             }
