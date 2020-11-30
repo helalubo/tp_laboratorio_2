@@ -362,19 +362,22 @@ namespace vista
 
 
                 }
+
                 catch (SobrepasaStockException e1)
                 {
                     MessageBox.Show(e1.Message);
                 }
-                catch (Exception e2)
+                catch (EstableciendoConexionException e2)
                 {
                     MessageBox.Show(e2.Message);
                 }
+
                 finally
                 {
                     this.aux.Clear();
                     this.textPago.Clear();
                     this.lblImporte.Text = "";
+                    MessageBox.Show("Se realizo la venta con exito");
 
                 }
 

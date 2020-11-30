@@ -138,18 +138,19 @@ namespace Entidades
                     sbInsrumentos.Clear();
                     sbAccesorios.Clear();
                 }
+                Venta.EventoTicket += TXTTicket;
+                EventoTicket(listaDeProductos);
             }
             catch (Exception )
             {
                 
                 string fallo = "No se pudo conectar la base de datos";
-                throw new Exception(fallo);
+                throw new EstableciendoConexionException(fallo);
             }
             finally
             {
                 conexion.Conexion.Close();
-                Venta.EventoTicket += TXTTicket;
-                EventoTicket(listaDeProductos);
+               
             }
 
 
@@ -209,7 +210,7 @@ namespace Entidades
 
         /// <summary>
         /// Serializa la venta en un archivo .xml poniendo en su
-        /// titulo la fecha y la hora en la que fue realizada la venta
+        /// titulo la fecha y la hora en la que fue realizada la venta, esto utilizando el metodo Extension de AgregarFecha alojado en Entidades.ExtensionesDeVenta.
         /// </summary>
         /// <param name="listaDeProductos">Lista de productos a manejar</param>
         public static void GuardarVentasEnXml(List<Producto> listaDeProductos)
