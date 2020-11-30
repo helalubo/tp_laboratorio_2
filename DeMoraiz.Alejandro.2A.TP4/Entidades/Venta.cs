@@ -91,11 +91,9 @@ namespace Entidades
 
 
         /// <summary>
-        /// Modifica el stock segun la lista de productos que se le pase,
-        /// luego de modificar el stock dependiendo si el producto es un instrumento
-        /// o si es un Accesorio,
+        /// modificar el stock en la base de datos SQL dependiendo si el producto es un instrumento o si es un Accesorio,
         /// agrega la funcion TXTTicket al evento 
-        /// EventoTicket y lo lanza
+        /// EventoTicket y lo lanza para ser ejecutado. 
         /// </summary>
         /// <param name="listaDeProductos">Lista de productos a manejar</param>
 
@@ -210,7 +208,7 @@ namespace Entidades
 
 
         /// <summary>
-        /// Guarda la venta en un archivo .xml poniendo en su
+        /// Serializa la venta en un archivo .xml poniendo en su
         /// titulo la fecha y la hora en la que fue realizada la venta
         /// </summary>
         /// <param name="listaDeProductos">Lista de productos a manejar</param>

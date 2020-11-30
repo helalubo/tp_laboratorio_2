@@ -192,20 +192,20 @@ namespace vista
         private void ConfigurarGrilla()
         {
             // Coloco color de fondo para las filas
-            this.dgvPrincipal.RowsDefaultCellStyle.BackColor = Color.Wheat;
+            this.dgvPrincipal.RowsDefaultCellStyle.BackColor = Color.MediumPurple;
 
             // Alterno colores
-            this.dgvPrincipal.AlternatingRowsDefaultCellStyle.BackColor = Color.BurlyWood;
+            this.dgvPrincipal.AlternatingRowsDefaultCellStyle.BackColor = Color.MediumPurple;
 
             // Pongo color de fondo a la grilla
-            this.dgvPrincipal.BackgroundColor = Color.Beige;
+            this.dgvPrincipal.BackgroundColor = Color.Lavender;
 
             // Defino fuente para el encabezado y alineación del encabezado
             this.dgvPrincipal.ColumnHeadersDefaultCellStyle.Font = new Font(dgvPrincipal.Font, FontStyle.Bold);
             this.dgvPrincipal.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
             // Defino el color de las lineas de separación
-            this.dgvPrincipal.GridColor = Color.Aqua;
+            this.dgvPrincipal.GridColor = Color.LimeGreen;
 
             // La grilla será de sólo lectura
             this.dgvPrincipal.ReadOnly = false;

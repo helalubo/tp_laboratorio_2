@@ -156,20 +156,20 @@ namespace vista
         private void ConfigurarGrilla()
         {
             // Coloco color de fondo para las filas
-            this.dgvGrilla.RowsDefaultCellStyle.BackColor = Color.Wheat;
+            this.dgvGrilla.RowsDefaultCellStyle.BackColor = Color.MediumPurple;
 
             // Alterno colores
-            this.dgvGrilla.AlternatingRowsDefaultCellStyle.BackColor = Color.BurlyWood;
+            this.dgvGrilla.AlternatingRowsDefaultCellStyle.BackColor = Color.MediumPurple;
 
             // Pongo color de fondo a la grilla
-            this.dgvGrilla.BackgroundColor = Color.Beige;
+            this.dgvGrilla.BackgroundColor = Color.SteelBlue;
 
             // Defino fuente para el encabezado y alineación del encabezado
             this.dgvGrilla.ColumnHeadersDefaultCellStyle.Font = new Font(dgvGrilla.Font, FontStyle.Bold);
             this.dgvGrilla.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
             // Defino el color de las lineas de separación
-            this.dgvGrilla.GridColor = Color.HotPink;
+            this.dgvGrilla.GridColor = Color.Black;
 
             // La grilla será de sólo lectura
             this.dgvGrilla.ReadOnly = false;
@@ -184,8 +184,8 @@ namespace vista
             this.dgvGrilla.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
             // Indico el color de la fila seleccionada
-            this.dgvGrilla.RowsDefaultCellStyle.SelectionBackColor = Color.DarkOliveGreen;
-            this.dgvGrilla.RowsDefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            this.dgvGrilla.RowsDefaultCellStyle.SelectionBackColor = Color.Black;
+            this.dgvGrilla.RowsDefaultCellStyle.SelectionForeColor = Color.White;
 
             // No permito modificar desde la grilla
             this.dgvGrilla.EditMode = DataGridViewEditMode.EditProgrammatically;
