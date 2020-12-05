@@ -173,8 +173,8 @@ namespace Entidades
 
           
             StringBuilder sb = new StringBuilder();
-            sb.AppendLine("                  Empresa xxxxx                  ");
-            sb.AppendLine("            ****************************         ");
+            sb.AppendLine("                Tienda de musica                 ");
+            sb.AppendLine("            ************************             ");
             sb.AppendLine("                                                 ");
             sb.AppendLine("                Factura de Venta                 ");
             sb.AppendLine("No Fac:                                          ");
