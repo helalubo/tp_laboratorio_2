@@ -1,5 +1,5 @@
 ﻿using CapaDatos;
-using Entidades;
+using Excepciones;
 using System;
 using System.Data;
 using System.Data.SqlClient;
@@ -51,7 +51,7 @@ namespace vista
 
 
             this.StartPosition = FormStartPosition.CenterScreen;
-          
+
 
 
 
@@ -106,7 +106,7 @@ namespace vista
 
                 MessageBox.Show(ex.Message);
             }
-            
+
 
             return rta;
         }
@@ -142,7 +142,7 @@ namespace vista
             this.dt.Columns["id"].AutoIncrementStep = 1;
 
 
-           
+
         }
 
         #endregion
@@ -221,14 +221,14 @@ namespace vista
                 this.ConfigurarGrilla();
 
 
-               this.da.Fill(this.dt);
+                this.da.Fill(this.dt);
 
 
 
 
                 this.dgvGrilla.DataSource = this.dt;
 
-               
+
 
             }
             catch (Exception ex)
@@ -252,9 +252,9 @@ namespace vista
 
         private void btnSeleccionProductos_Click(object sender, EventArgs e)
         {
-
-
+           
             
+
 
 
             try
@@ -274,46 +274,10 @@ namespace vista
 
 
                 this.da = new SqlDataAdapter();
-                   this.dt = new DataTable();
-             
-
-                this.da.SelectCommand = new SqlCommand("select id , nombre,precio ,cantidad  from Instrumento where id = " + id +";", accesoADatos.Conexion);
-
-
-                
-                this.da.Fill(this.dt);
-
-                
-
-                this.Close();
-
-            }
-            catch (Exception ex)
-            {
-
-                MessageBox.Show(ex.Message);
-            }
-
-
-        }
-
-        private void SeleccionDeInstrumentos_Load(object sender, EventArgs e)
-        {
-
-            try
-            {
-
-
-                AccesoDatos accesoADatos = new AccesoDatos();
-
-
-
-
-                this.da = new SqlDataAdapter();
                 this.dt = new DataTable();
 
 
-                this.da.SelectCommand = new SqlCommand("select * from Instrumento ", accesoADatos.Conexion);
+                this.da.SelectCommand = new SqlCommand("select id , nombre,precio ,cantidad  from Instrumento where id = " + id + ";", accesoADatos.Conexion);
 
 
 
@@ -324,12 +288,17 @@ namespace vista
                 this.Close();
 
             }
-            catch (Exception ex)
+
+            catch (Exception ex1)
             {
-               //onfigurar excepcion en caso de que funcione
-                MessageBox.Show(ex.Message);
+                ///creo SeleccionInvalidaException 
+                MessageBox.Show(ex1.Message);
+
             }
 
+
         }
+
+
     }
 }

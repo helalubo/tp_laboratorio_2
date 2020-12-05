@@ -18,3 +18,17 @@ C:\Users\User\Desktop\UTN\tp_laboratorio_2\DeMoraiz.Alejandro.2A.TP4\Entidades\b
 C:\Users\User\Desktop\UTN\tp_laboratorio_2\DeMoraiz.Alejandro.2A.TP4\Entidades\bin\Debug\CapaDatos.dll.config
 C:\Users\User\Desktop\UTN\tp_laboratorio_2\DeMoraiz.Alejandro.2A.TP4\Entidades\bin\Debug\Archivos.dll
 C:\Users\User\Desktop\UTN\tp_laboratorio_2\DeMoraiz.Alejandro.2A.TP4\Entidades\bin\Debug\Archivos.pdb
+C:\Users\User\Desktop\UTN\tp_laboratorio_2\RecuperatoriosTP\DeMoraiz.Alejandro.2A.TP4\Entidades\bin\Debug\Entidades.dll
+C:\Users\User\Desktop\UTN\tp_laboratorio_2\RecuperatoriosTP\DeMoraiz.Alejandro.2A.TP4\Entidades\bin\Debug\Entidades.pdb
+C:\Users\User\Desktop\UTN\tp_laboratorio_2\RecuperatoriosTP\DeMoraiz.Alejandro.2A.TP4\Entidades\bin\Debug\Archivos.dll
+C:\Users\User\Desktop\UTN\tp_laboratorio_2\RecuperatoriosTP\DeMoraiz.Alejandro.2A.TP4\Entidades\bin\Debug\CapaDatos.dll
+C:\Users\User\Desktop\UTN\tp_laboratorio_2\RecuperatoriosTP\DeMoraiz.Alejandro.2A.TP4\Entidades\bin\Debug\Excepciones.dll
+C:\Users\User\Desktop\UTN\tp_laboratorio_2\RecuperatoriosTP\DeMoraiz.Alejandro.2A.TP4\Entidades\bin\Debug\Archivos.pdb
+C:\Users\User\Desktop\UTN\tp_laboratorio_2\RecuperatoriosTP\DeMoraiz.Alejandro.2A.TP4\Entidades\bin\Debug\CapaDatos.pdb
+C:\Users\User\Desktop\UTN\tp_laboratorio_2\RecuperatoriosTP\DeMoraiz.Alejandro.2A.TP4\Entidades\bin\Debug\CapaDatos.dll.config
+C:\Users\User\Desktop\UTN\tp_laboratorio_2\RecuperatoriosTP\DeMoraiz.Alejandro.2A.TP4\Entidades\bin\Debug\Excepciones.pdb
+C:\Users\User\Desktop\UTN\tp_laboratorio_2\RecuperatoriosTP\DeMoraiz.Alejandro.2A.TP4\Entidades\obj\Debug\Entidades.csprojAssemblyReference.cache
+C:\Users\User\Desktop\UTN\tp_laboratorio_2\RecuperatoriosTP\DeMoraiz.Alejandro.2A.TP4\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\UTN\tp_laboratorio_2\RecuperatoriosTP\DeMoraiz.Alejandro.2A.TP4\Entidades\obj\Debug\Entidades.csproj.CopyComplete
+C:\Users\User\Desktop\UTN\tp_laboratorio_2\RecuperatoriosTP\DeMoraiz.Alejandro.2A.TP4\Entidades\obj\Debug\Entidades.dll
+C:\Users\User\Desktop\UTN\tp_laboratorio_2\RecuperatoriosTP\DeMoraiz.Alejandro.2A.TP4\Entidades\obj\Debug\Entidades.pdb

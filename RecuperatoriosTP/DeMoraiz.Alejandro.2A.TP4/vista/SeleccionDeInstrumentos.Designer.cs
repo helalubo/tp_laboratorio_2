@@ -127,7 +127,7 @@ namespace vista
             this.Controls.Add(this.dgvGrilla);
             this.Name = "SeleccionDeInstrumentos";
             this.Text = "Seleccione productos...";
-            //this.Load += new System.EventHandler(this.SeleccionDeInstrumentos_Load);
+            
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrilla)).EndInit();
             this.SeleccionInstrumentos.ResumeLayout(false);
             this.SeleccionInstrumentos.PerformLayout();

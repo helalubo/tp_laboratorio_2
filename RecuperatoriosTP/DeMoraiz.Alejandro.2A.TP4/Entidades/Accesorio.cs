@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Entidades
+﻿namespace Entidades
 {
     /// <summary>
     /// Clase Accesorio hija de producto
@@ -22,7 +16,7 @@ namespace Entidades
 
         public Accesorio()
         {
-            
+
         }
 
         /// <summary>
@@ -35,7 +29,7 @@ namespace Entidades
         /// <param name="gama">Gama del accesorio</param>
         /// <param name="tipo">Tipo del accesorio</param>
 
-        public Accesorio(int id, string nombre, float precio, int cantidad, EGama gama,ETipo tipo): base( id,  nombre,  precio,  cantidad)
+        public Accesorio(int id, string nombre, float precio, int cantidad, EGama gama, ETipo tipo) : base(id, nombre, precio, cantidad)
         {
             this.gama = gama;
             this.tipo = tipo;
@@ -67,11 +61,11 @@ namespace Entidades
 
         public enum ETipo
         {
-            AccesorioGuitarra,
-            AccesorioBateria,
-            AccesorioTeclado,
-            AccesorioBajo,
-            Accesoriootro
+            Guitarra,
+            Bateria,
+            Teclado,
+            Bajo,
+            OTRO
 
 
         }

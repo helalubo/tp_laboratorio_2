@@ -1,4 +1,6 @@
 ﻿using CapaDatos;
+using Excepciones;
+using Entidades;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -123,8 +125,10 @@ namespace vista
             this.dt.Columns.Add("nombre", typeof(string));
             this.dt.Columns.Add("precio", typeof(float));
             this.dt.Columns.Add("cantidad", typeof(int));
-            this.dt.Columns.Add("gama", typeof(int));
-            this.dt.Columns.Add("tipo", typeof(int));
+            //this.dt.Columns.Add("gama", typeof(int));
+            this.dt.Columns.Add("gama", typeof(Accesorio.EGama));
+            //this.dt.Columns.Add("tipo", typeof(Accesorio.int));
+            this.dt.Columns.Add("tipo", typeof(Accesorio.ETipo));
 
             this.dt.PrimaryKey = new DataColumn[] { this.dt.Columns[0] };
 
@@ -280,6 +284,8 @@ namespace vista
             }
             catch (Exception ex)
             {
+                
+              
 
                 MessageBox.Show(ex.Message);
             }
