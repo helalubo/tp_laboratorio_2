@@ -35,7 +35,7 @@ namespace vista
         DelegadoDeVenta miDelegadoDeVenta;
 
 
-        public string ImporteDeVenta
+        public float ImporteDeVenta
         {
 
 
@@ -53,11 +53,10 @@ namespace vista
 
                 }
 
+               
 
 
-
-
-                return cantidad.ToString();
+                return cantidad;
 
 
 
@@ -303,7 +302,7 @@ namespace vista
                     }
 
                     this.dgvPrincipal.DataSource = aux;
-                    this.lblImporte.Text = ImporteDeVenta;
+                    this.lblImporte.Text = ImporteDeVenta.ToString();
 
                     this.aux = (DataTable)this.dgvPrincipal.DataSource;
                 });
@@ -313,7 +312,7 @@ namespace vista
             {
 
                 this.dgvPrincipal.DataSource = aux;
-                this.lblImporte.Text = ImporteDeVenta;
+                this.lblImporte.Text = ImporteDeVenta.ToString();
                 this.aux = (DataTable)this.dgvPrincipal.DataSource;
 
 
@@ -338,12 +337,14 @@ namespace vista
         {
 
 
+          
 
 
-
-
-            if (float.Parse(this.textPago.Text) >= float.Parse(ImporteDeVenta))
+            if (float.Parse(this.textPago.Text) >= ImporteDeVenta)
             {
+
+               
+                 
 
                 List<Producto> productos = ProductosSeleccionados;
 
@@ -357,9 +358,10 @@ namespace vista
 
                 try
                 {
+
+
                     miDelegadoDeVenta.Invoke(productos);
-
-
+                    
 
                 }
 
@@ -374,10 +376,12 @@ namespace vista
 
                 finally
                 {
+                    string cadena = string.Format("La venta se realizo con exito \n \t \t El vuelto es de un total de {0} $", (float)(Convert.ToDouble(this.textPago.Text)) - ImporteDeVenta);
+                    MessageBox.Show(cadena);
                     this.aux.Clear();
                     this.textPago.Clear();
                     this.lblImporte.Text = "";
-                    MessageBox.Show("Se realizo la venta con exito");
+                   
 
                 }
 

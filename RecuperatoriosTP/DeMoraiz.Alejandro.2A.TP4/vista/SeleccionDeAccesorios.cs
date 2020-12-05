@@ -125,9 +125,9 @@ namespace vista
             this.dt.Columns.Add("nombre", typeof(string));
             this.dt.Columns.Add("precio", typeof(float));
             this.dt.Columns.Add("cantidad", typeof(int));
-            //this.dt.Columns.Add("gama", typeof(int));
+        
             this.dt.Columns.Add("gama", typeof(Accesorio.EGama));
-            //this.dt.Columns.Add("tipo", typeof(Accesorio.int));
+          
             this.dt.Columns.Add("tipo", typeof(Accesorio.ETipo));
 
             this.dt.PrimaryKey = new DataColumn[] { this.dt.Columns[0] };

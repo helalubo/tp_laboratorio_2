@@ -66,7 +66,7 @@ namespace vista
             // btnCargarInstrumento
             // 
             this.btnCargarInstrumento.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCargarInstrumento.Location = new System.Drawing.Point(32, 156);
+            this.btnCargarInstrumento.Location = new System.Drawing.Point(32, 164);
             this.btnCargarInstrumento.Name = "btnCargarInstrumento";
             this.btnCargarInstrumento.Size = new System.Drawing.Size(415, 41);
             this.btnCargarInstrumento.TabIndex = 2;
@@ -77,7 +77,7 @@ namespace vista
             // btnCargarAccesorio
             // 
             this.btnCargarAccesorio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCargarAccesorio.Location = new System.Drawing.Point(494, 156);
+            this.btnCargarAccesorio.Location = new System.Drawing.Point(494, 164);
             this.btnCargarAccesorio.Name = "btnCargarAccesorio";
             this.btnCargarAccesorio.Size = new System.Drawing.Size(428, 41);
             this.btnCargarAccesorio.TabIndex = 3;
@@ -102,18 +102,18 @@ namespace vista
             // dgvPrincipal
             // 
             this.dgvPrincipal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPrincipal.Location = new System.Drawing.Point(32, 222);
+            this.dgvPrincipal.Location = new System.Drawing.Point(32, 239);
             this.dgvPrincipal.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgvPrincipal.Name = "dgvPrincipal";
             this.dgvPrincipal.RowHeadersWidth = 62;
-            this.dgvPrincipal.Size = new System.Drawing.Size(890, 273);
+            this.dgvPrincipal.Size = new System.Drawing.Size(890, 253);
             this.dgvPrincipal.TabIndex = 11;
             // 
             // btnActualizar
             // 
             this.btnActualizar.Location = new System.Drawing.Point(959, 145);
             this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(217, 147);
+            this.btnActualizar.Size = new System.Drawing.Size(217, 78);
             this.btnActualizar.TabIndex = 12;
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.UseVisualStyleBackColor = true;
@@ -121,7 +121,7 @@ namespace vista
             // 
             // textPago
             // 
-            this.textPago.Location = new System.Drawing.Point(959, 393);
+            this.textPago.Location = new System.Drawing.Point(959, 397);
             this.textPago.Name = "textPago";
             this.textPago.Size = new System.Drawing.Size(217, 26);
             this.textPago.TabIndex = 15;
@@ -133,7 +133,7 @@ namespace vista
             this.lblImporte.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblImporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblImporte.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.lblImporte.Location = new System.Drawing.Point(980, 328);
+            this.lblImporte.Location = new System.Drawing.Point(974, 263);
             this.lblImporte.Name = "lblImporte";
             this.lblImporte.Size = new System.Drawing.Size(0, 46);
             this.lblImporte.TabIndex = 14;
