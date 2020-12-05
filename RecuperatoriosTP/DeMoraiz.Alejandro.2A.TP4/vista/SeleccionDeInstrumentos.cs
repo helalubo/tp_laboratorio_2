@@ -51,7 +51,7 @@ namespace vista
 
 
             this.StartPosition = FormStartPosition.CenterScreen;
-
+          
 
 
 
@@ -254,16 +254,18 @@ namespace vista
         {
 
 
-            int i = this.dgvGrilla.SelectedRows[0].Index;
-
-
-            DataRow fila = this.dt.Rows[i];
             
-            string id = (fila["id"].ToString());
 
 
             try
             {
+
+                int i = this.dgvGrilla.SelectedRows[0].Index;
+
+
+                DataRow fila = this.dt.Rows[i];
+
+                string id = (fila["id"].ToString());
 
 
                 AccesoDatos accesoADatos = new AccesoDatos();
@@ -295,8 +297,39 @@ namespace vista
 
         }
 
-        
+        private void SeleccionDeInstrumentos_Load(object sender, EventArgs e)
+        {
+
+            try
+            {
 
 
+                AccesoDatos accesoADatos = new AccesoDatos();
+
+
+
+
+                this.da = new SqlDataAdapter();
+                this.dt = new DataTable();
+
+
+                this.da.SelectCommand = new SqlCommand("select * from Instrumento ", accesoADatos.Conexion);
+
+
+
+                this.da.Fill(this.dt);
+
+
+
+                this.Close();
+
+            }
+            catch (Exception ex)
+            {
+               //onfigurar excepcion en caso de que funcione
+                MessageBox.Show(ex.Message);
+            }
+
+        }
     }
 }

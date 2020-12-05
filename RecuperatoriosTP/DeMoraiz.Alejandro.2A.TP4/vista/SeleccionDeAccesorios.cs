@@ -242,17 +242,21 @@ namespace vista
         private void btnSeleccionProductos_Click(object sender, EventArgs e)
         {
 
+            
 
-            int i = this.dgvGrilla.SelectedRows[0].Index;
-
-
-            DataRow fila = this.dt.Rows[i];
-
-            string id = (fila["id"].ToString());
+         
 
 
             try
             {
+
+
+                int i = this.dgvGrilla.SelectedRows[0].Index;
+
+
+                DataRow fila = this.dt.Rows[i];
+
+                string id = (fila["id"].ToString());
 
 
                 AccesoDatos accesoADatos = new AccesoDatos();
