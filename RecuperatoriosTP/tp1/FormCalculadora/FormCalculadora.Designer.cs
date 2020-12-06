@@ -89,6 +89,7 @@
             this.btnCerrar.TabIndex = 5;
             this.btnCerrar.Text = "Cerrar";
             this.btnCerrar.UseVisualStyleBackColor = true;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // cmbOperador
             // 
@@ -171,6 +172,7 @@
             this.Name = "FormCalculadora";
             this.Text = "Calculadora de Alejandro De Moraiz del curso 2ºB";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.formCalculadora_Closing);
+            this.Load += new System.EventHandler(this.FormCalculadora_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
