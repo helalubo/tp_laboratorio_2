@@ -13,3 +13,211 @@ Teclado XYZ              1        $5000
 -------------------------------------------------
 Total                             $5000
 
+                Tienda de musica                 
+            ************************             
+                                                 
+                Factura de Venta                 
+No Fac:                                          
+Fecha: 05/12/2020 20:41:33                           
+Fue atendido:                                    
+                                                 
+-------------------------------------------------
+Articulo                      Cant        P.Unit 
+-------------------------------------------------
+Teclado XYZ              1        $5000
+Palillos Logan              1        $350
+-------------------------------------------------
+Total                             $5350
+
+                Tienda de musica                 
+            ************************             
+                                                 
+                Factura de Venta                 
+No Fac:                                          
+Fecha: 05/12/2020 20:41:46                           
+Fue atendido:                                    
+                                                 
+-------------------------------------------------
+Articulo                      Cant        P.Unit 
+-------------------------------------------------
+Palillos Logan              1        $350
+Palillos Logan              1        $350
+Palillos Logan              1        $350
+Palillos Logan              1        $350
+-------------------------------------------------
+Total                             $1400
+
+                Tienda de musica                 
+            ************************             
+                                                 
+                Factura de Venta                 
+No Fac:                                          
+Fecha: 05/12/2020 20:41:46                           
+Fue atendido:                                    
+                                                 
+-------------------------------------------------
+Articulo                      Cant        P.Unit 
+-------------------------------------------------
+Palillos Logan              1        $350
+Palillos Logan              1        $350
+Palillos Logan              1        $350
+Palillos Logan              1        $350
+-------------------------------------------------
+Total                             $1400
+
+                Tienda de musica                 
+            ************************             
+                                                 
+                Factura de Venta                 
+No Fac:                                          
+Fecha: 06/12/2020 13:31:35                           
+Fue atendido:                                    
+                                                 
+-------------------------------------------------
+Articulo                      Cant        P.Unit 
+-------------------------------------------------
+Guitarra Stratocaster Fender               1        $88000
+Puas Fender *12              1        $500
+Banquillo Pearl              1        $9000
+Banquillo Pearl              1        $9000
+Banquillo Pearl              1        $9000
+Banquillo Pearl              1        $9000
+Bateria  Ludwig               1        $90000
+-------------------------------------------------
+Total                             $214500
+
+                Tienda de musica                 
+            ************************             
+                                                 
+                Factura de Venta                 
+No Fac:                                          
+Fecha: 06/12/2020 19:53:50                           
+Fue atendido:                                    
+                                                 
+-------------------------------------------------
+Articulo                      Cant        P.Unit 
+-------------------------------------------------
+Bateria Mapex              1        $99000
+-------------------------------------------------
+Total                             $99000
+
+                Tienda de musica                 
+            ************************             
+                                                 
+                Factura de Venta                 
+No Fac:                                          
+Fecha: 06/12/2020 19:58:23                           
+Fue atendido:                                    
+                                                 
+-------------------------------------------------
+Articulo                      Cant        P.Unit 
+-------------------------------------------------
+Bateria Sonor               1        $100000
+-------------------------------------------------
+Total                             $100000
+
+                Tienda de musica                 
+            ************************             
+                                                 
+                Factura de Venta                 
+No Fac:                                          
+Fecha: 06/12/2020 19:58:48                           
+Fue atendido:                                    
+                                                 
+-------------------------------------------------
+Articulo                      Cant        P.Unit 
+-------------------------------------------------
+Guitarra Stratocaster Fender               1        $88000
+-------------------------------------------------
+Total                             $88000
+
+                Tienda de musica                 
+            ************************             
+                                                 
+                Factura de Venta                 
+No Fac:                                          
+Fecha: 06/12/2020 19:58:48                           
+Fue atendido:                                    
+                                                 
+-------------------------------------------------
+Articulo                      Cant        P.Unit 
+-------------------------------------------------
+Guitarra Stratocaster Fender               1        $88000
+-------------------------------------------------
+Total                             $88000
+
+                Tienda de musica                 
+            ************************             
+                                                 
+                Factura de Venta                 
+No Fac:                                          
+Fecha: 06/12/2020 19:59:06                           
+Fue atendido:                                    
+                                                 
+-------------------------------------------------
+Articulo                      Cant        P.Unit 
+-------------------------------------------------
+Puas Fender *24              1        $850
+-------------------------------------------------
+Total                             $850
+
+                Tienda de musica                 
+            ************************             
+                                                 
+                Factura de Venta                 
+No Fac:                                          
+Fecha: 06/12/2020 19:59:06                           
+Fue atendido:                                    
+                                                 
+-------------------------------------------------
+Articulo                      Cant        P.Unit 
+-------------------------------------------------
+Puas Fender *24              1        $850
+-------------------------------------------------
+Total                             $850
+
+                Tienda de musica                 
+            ************************             
+                                                 
+                Factura de Venta                 
+No Fac:                                          
+Fecha: 06/12/2020 19:59:06                           
+Fue atendido:                                    
+                                                 
+-------------------------------------------------
+Articulo                      Cant        P.Unit 
+-------------------------------------------------
+Puas Fender *24              1        $850
+-------------------------------------------------
+Total                             $850
+
+                Tienda de musica                 
+            ************************             
+                                                 
+                Factura de Venta                 
+No Fac:                                          
+Fecha: 06/12/2020 20:01:37                           
+Fue atendido:                                    
+                                                 
+-------------------------------------------------
+Articulo                      Cant        P.Unit 
+-------------------------------------------------
+Bateria  Ludwig               1        $90000
+-------------------------------------------------
+Total                             $90000
+
+                Tienda de musica                 
+            ************************             
+                                                 
+                Factura de Venta                 
+No Fac:                                          
+Fecha: 06/12/2020 20:09:05                           
+Fue atendido:                                    
+                                                 
+-------------------------------------------------
+Articulo                      Cant        P.Unit 
+-------------------------------------------------
+Guitarra Stratocaster Fender               1        $88000
+-------------------------------------------------
+Total                             $88000
+

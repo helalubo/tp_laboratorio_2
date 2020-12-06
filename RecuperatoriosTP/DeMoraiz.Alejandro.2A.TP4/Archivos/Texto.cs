@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
+using Excepciones;
 
 namespace Archivos
 {
@@ -29,9 +30,9 @@ namespace Archivos
                     rta = true;
                 }
             }
-            catch (Exception )
+            catch (Exception e)
             {
-               
+                throw new TicketException(e);
             }
 
             return rta;

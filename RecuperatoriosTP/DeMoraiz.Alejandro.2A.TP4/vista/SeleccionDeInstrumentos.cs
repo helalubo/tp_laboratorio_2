@@ -175,7 +175,7 @@ namespace vista
             this.dgvGrilla.ReadOnly = false;
 
             // No permito la multiselección
-            this.dgvGrilla.MultiSelect = true;
+            this.dgvGrilla.MultiSelect = false;
 
             // Selecciono toda la fila a la vez // FullRowSelect
             this.dgvGrilla.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
@@ -185,7 +185,7 @@ namespace vista
 
             // Indico el color de la fila seleccionada
             this.dgvGrilla.RowsDefaultCellStyle.SelectionBackColor = Color.Black;
-            this.dgvGrilla.RowsDefaultCellStyle.SelectionForeColor = Color.White;
+            this.dgvGrilla.RowsDefaultCellStyle.SelectionForeColor = Color.Green;
 
             // No permito modificar desde la grilla
             this.dgvGrilla.EditMode = DataGridViewEditMode.EditProgrammatically;

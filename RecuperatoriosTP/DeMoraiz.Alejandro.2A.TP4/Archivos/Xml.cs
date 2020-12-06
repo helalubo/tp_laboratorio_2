@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Xml;
 using System.Xml.Serialization;
+using Excepciones;
 
 namespace Archivos
 {
@@ -38,7 +39,7 @@ namespace Archivos
             }
             catch (Exception e)
             {
-                Console.Write(e.Message);
+                throw new ArchivoXmlException(e);
             }
 
             return rta;

@@ -149,42 +149,20 @@ namespace vista
         /// </summary>
         private void ConfigurarGrilla()
         {
-            // Coloco color de fondo para las filas
+         
             this.dgvGrilla.RowsDefaultCellStyle.BackColor = Color.LightSteelBlue;
-
-            // Alterno colores
             this.dgvGrilla.AlternatingRowsDefaultCellStyle.BackColor = Color.LightSteelBlue;
-
-            // Pongo color de fondo a la grilla
             this.dgvGrilla.BackgroundColor = Color.LightSteelBlue;
-
-            // Defino fuente para el encabezado y alineación del encabezado
             this.dgvGrilla.ColumnHeadersDefaultCellStyle.Font = new Font(dgvGrilla.Font, FontStyle.Bold);
             this.dgvGrilla.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-
-            // Defino el color de las lineas de separación
             this.dgvGrilla.GridColor = Color.MidnightBlue;
-
-            // La grilla será de sólo lectura
             this.dgvGrilla.ReadOnly = false;
-
-            // No permito la multiselección
-            this.dgvGrilla.MultiSelect = true;
-
-            // Selecciono toda la fila a la vez // FullRowSelect
+            this.dgvGrilla.MultiSelect = false;
             this.dgvGrilla.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-
-            // Hago que las columnas ocupen todo el ancho del 'DataGrid'
             this.dgvGrilla.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-
-            // Indico el color de la fila seleccionada
             this.dgvGrilla.RowsDefaultCellStyle.SelectionBackColor = Color.Black;
             this.dgvGrilla.RowsDefaultCellStyle.SelectionForeColor = Color.White;
-
-            // No permito modificar desde la grilla
             this.dgvGrilla.EditMode = DataGridViewEditMode.EditProgrammatically;
-
-            // Saco los encabezados de las filas
             this.dgvGrilla.RowHeadersVisible = false;
 
         }

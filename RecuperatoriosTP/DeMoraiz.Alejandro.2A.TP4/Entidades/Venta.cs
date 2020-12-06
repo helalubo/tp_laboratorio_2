@@ -1,5 +1,5 @@
-﻿using CapaDatos;
-using Archivos;
+﻿using Archivos;
+using CapaDatos;
 using Excepciones;
 using System;
 using System.Collections.Generic;
@@ -27,9 +27,9 @@ namespace Entidades
         /// Evento de tipo DelegadoDeVenta
         /// </summary>
 
-        public static  event DelegadoDeVenta EventoTicket;
+        public static event DelegadoDeVenta EventoTicket;
 
-   
+
         /// <summary>
         /// Constructor vacio de venta
         /// </summary>
@@ -48,11 +48,11 @@ namespace Entidades
 
         public static void VerificarStock(List<Producto> listaDeProductos)
         {
-            
+
 
             int cont;
 
-           
+
 
             for (int i = 0; i < listaDeProductos.Count; i++)
             {
@@ -97,17 +97,17 @@ namespace Entidades
         /// </summary>
         /// <param name="listaDeProductos">Lista de productos a manejar</param>
 
-        public static  void modificarStock(List<Producto> listaDeProductos)
+        public static void modificarStock(List<Producto> listaDeProductos)
         {
 
 
-          
+
 
 
 
             StringBuilder sbAccesorios = new StringBuilder();
             StringBuilder sbInsrumentos = new StringBuilder();
-            
+
 
             AccesoDatos conexion = new AccesoDatos();
 
@@ -141,22 +141,22 @@ namespace Entidades
                 Venta.EventoTicket += TXTTicket;
                 EventoTicket(listaDeProductos);
             }
-            catch (Exception )
+            catch (Exception)
             {
-                
+
                 string fallo = "No se pudo conectar la base de datos";
                 throw new EstableciendoConexionException(fallo);
             }
             finally
             {
                 conexion.Conexion.Close();
-               
+
             }
 
 
 
 
-      
+
 
 
         }
@@ -171,7 +171,7 @@ namespace Entidades
 
             float precioTotal = 0;
 
-          
+
             StringBuilder sb = new StringBuilder();
             sb.AppendLine("                Tienda de musica                 ");
             sb.AppendLine("            ************************             ");
@@ -188,22 +188,35 @@ namespace Entidades
             if (listaDeProductos != null)
             {
 
-              
+
 
                 foreach (Producto aux in listaDeProductos)
                 {
-            sb.AppendLine($"{aux.Nombre}              1        ${aux.Precio}");
+                    sb.AppendLine($"{aux.Nombre}              1        ${aux.Precio}");
                     precioTotal += aux.Precio;
                 }
 
             }
             sb.AppendLine("-------------------------------------------------");
-            sb.AppendLine($"Total                             ${precioTotal}");
+            sb.AppendLine($"Total   " +
+                $"                          ${precioTotal}");
 
-            Texto archivoTicket = new Texto(); 
-           
+            ///agrego try y capturo el thorow de texto. guardado ext 
+            ///
 
-            archivoTicket.Guardar("Tickets.txt" , sb.ToString());
+
+            try
+            {
+
+                Texto archivoTicket = new Texto();
+
+
+                archivoTicket.Guardar("Tickets.txt", sb.ToString());
+            }
+            catch (TicketException e)
+            {
+                Console.WriteLine(e.Message);
+            }
 
         }
 
@@ -216,23 +229,31 @@ namespace Entidades
         public static void GuardarVentasEnXml(List<Producto> listaDeProductos)
         {
 
-            
-            
-            
-            String nombreArchivoXml = "ArticulosVendidos.xml";
-            nombreArchivoXml = nombreArchivoXml.AgregarFecha();
 
-            foreach (Producto productoAux in listaDeProductos)
+            try
             {
-                productoAux.Cantidad = 1;
+
+
+
+                String nombreArchivoXml = "ArticulosVendidos.xml";
+                nombreArchivoXml = nombreArchivoXml.AgregarFecha();
+
+                foreach (Producto productoAux in listaDeProductos)
+                {
+                    productoAux.Cantidad = 1;
+                }
+
+
+                Xml<List<Producto>> ArchivoVenta = new Xml<List<Producto>>();
+                ArchivoVenta.Guardar(nombreArchivoXml, listaDeProductos);
+
+            }
+            catch (ArchivoXmlException e)
+            {
+                Console.WriteLine(e.Message);
             }
 
 
-            Xml<List<Producto>> ArchivoVenta = new Xml<List<Producto>>();
-            ArchivoVenta.Guardar(nombreArchivoXml, listaDeProductos);
-
-
-         
 
 
 

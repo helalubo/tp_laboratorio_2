@@ -190,42 +190,20 @@ namespace vista
 
         private void ConfigurarGrilla()
         {
-            // Coloco color de fondo para las filas
+            
             this.dgvPrincipal.RowsDefaultCellStyle.BackColor = Color.MediumPurple;
-
-            // Alterno colores
             this.dgvPrincipal.AlternatingRowsDefaultCellStyle.BackColor = Color.MediumPurple;
-
-            // Pongo color de fondo a la grilla
             this.dgvPrincipal.BackgroundColor = Color.Lavender;
-
-            // Defino fuente para el encabezado y alineación del encabezado
             this.dgvPrincipal.ColumnHeadersDefaultCellStyle.Font = new Font(dgvPrincipal.Font, FontStyle.Bold);
             this.dgvPrincipal.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-
-            // Defino el color de las lineas de separación
-            this.dgvPrincipal.GridColor = Color.LimeGreen;
-
-            // La grilla será de sólo lectura
+            this.dgvPrincipal.GridColor = Color.Purple;
             this.dgvPrincipal.ReadOnly = false;
-
-            // No permito la multiselección
-            this.dgvPrincipal.MultiSelect = true;
-
-            // Selecciono toda la fila a la vez
+            this.dgvPrincipal.MultiSelect = false;
             this.dgvPrincipal.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-
-            // Hago que las columnas ocupen todo el ancho del 'DataGrid'
             this.dgvPrincipal.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-
-            // Indico el color de la fila seleccionada
             this.dgvPrincipal.RowsDefaultCellStyle.SelectionBackColor = Color.Black;
-            this.dgvPrincipal.RowsDefaultCellStyle.SelectionForeColor = Color.White;
-
-            // No permito modificar desde la grilla
+            this.dgvPrincipal.RowsDefaultCellStyle.SelectionForeColor = Color.Green;
             this.dgvPrincipal.EditMode = DataGridViewEditMode.EditProgrammatically;
-
-            // Saco los encabezados de las filas
             this.dgvPrincipal.RowHeadersVisible = false;
 
 
@@ -284,12 +262,7 @@ namespace vista
                             this.aux.ImportRow(this.frmSeleccionarAccesorio.dt.Rows[0]);
 
                         }
-                        else
-                        {
-
-
-                            MessageBox.Show("No se a cargado ningun producto todavia");
-                        }
+                       
 
 
 
@@ -340,7 +313,7 @@ namespace vista
           
 
 
-            if (float.Parse(this.textPago.Text) >= ImporteDeVenta)
+            if (this.textPago.Text != ""  && float.Parse(this.textPago.Text) >= ImporteDeVenta   )
             {
 
                
@@ -348,12 +321,12 @@ namespace vista
 
                 List<Producto> productos = ProductosSeleccionados;
 
-                //inicializo al delegado
+             
                 miDelegadoDeVenta = new DelegadoDeVenta(Venta.VerificarStock);
                 miDelegadoDeVenta += Venta.modificarStock;
                 miDelegadoDeVenta += Venta.GuardarVentasEnXml;
 
-
+                
 
 
                 try
@@ -361,7 +334,8 @@ namespace vista
 
 
                     miDelegadoDeVenta.Invoke(productos);
-                    
+                    string cadena = string.Format("La venta se realizo con exito \n \t \t El vuelto es de un total de {0} $", (float)(Convert.ToDouble(this.textPago.Text)) - ImporteDeVenta);
+                    MessageBox.Show(cadena);
 
                 }
 
@@ -376,8 +350,8 @@ namespace vista
 
                 finally
                 {
-                    string cadena = string.Format("La venta se realizo con exito \n \t \t El vuelto es de un total de {0} $", (float)(Convert.ToDouble(this.textPago.Text)) - ImporteDeVenta);
-                    MessageBox.Show(cadena);
+                    //string cadena = string.Format("La venta se realizo con exito \n \t \t El vuelto es de un total de {0} $", (float)(Convert.ToDouble(this.textPago.Text)) - ImporteDeVenta);
+                    //MessageBox.Show(cadena);
                     this.aux.Clear();
                     this.textPago.Clear();
                     this.lblImporte.Text = "";
